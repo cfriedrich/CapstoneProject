@@ -1,0 +1,96 @@
+﻿body {
+    font-family: 'Segoe UI';
+    width: 750px;
+    margin: 0 auto;
+}
+
+#Layout {
+    border: none;
+}
+
+#Header {
+    border: 2px solid gray;
+    background-color: black;
+    color: white;
+    font-size: 68px;
+    height: 100px;
+    width: 750px;
+}
+
+#Main {
+    border: 2px solid gray;
+}
+
+#Nav {
+    border: 2px solid gray;
+}
+
+.button {
+    height: 40px;
+    text-align: center;
+    background-color: dimgray;
+    display: grid;
+    width: 150px;
+}
+
+
+/*div#NavIndex A {
+    font-family: 'Segoe UI';
+    display: block;
+    padding: .6em;
+    color: white;
+    border-bottom: 1px solid silver;
+}
+
+    div#NavIndex A.selected {
+        background-color: gray;
+        color: black;
+    }
+
+    div#NavIndex A.hover {
+        background-color: silver;
+    }
+
+    div#NavIndex A.selected:hover {
+        background-color: gray;
+    }*/
+
+table#Menu {
+}
+
+#NavItem {
+    height: 40px;
+    text-align: center;
+    background-color: dimgray;
+    display:grid;
+}
+
+#NavItem td:hover {
+        background-color: silver;
+    }
+
+#NavItem A {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+#NavItem A.selected {
+        background-color: gray;
+        color: black;
+    }
+
+#NavItem A:hover {
+    }
+
+#NavItem A.selected:hover {
+        background-color: gray;
+    }
+
+#Logo {
+    float:right;
+}
+
+#Main {
+
+}

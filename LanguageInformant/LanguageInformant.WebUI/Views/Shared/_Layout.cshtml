@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")"></script>
+</head>
+<body>
+    <table id="Layout">
+        <tr>
+            <td id="Header" colspan="3">
+                Language Informant
+                <img id="Logo" src="~/Content/Images/Logo.png" height=100 width=100 />
+            </td>
+        <tr>
+            <td id="Nav" width="20%" valign="top">
+                @Html.Partial("Menu")
+            </td>
+            <td id="Main" width="80%">
+                @RenderBody()
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

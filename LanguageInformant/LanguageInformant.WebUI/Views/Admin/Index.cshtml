@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Admin Portal";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table>
+    <tr>
+        <td class="button">
+            @Html.ActionLink("Edit Words", "Index", "Word")
+        </td>
+    </tr>
+    <tr>
+        <td class="button">
+            @Html.ActionLink("Edit Meanings", "Index", "Meaning")
+        </td>
+    </tr>
+    <tr>
+        <td class="button">
+            @Html.ActionLink("Edit Lessons", "Index", "Lesson")
+        </td>
+    </tr>
+</table>
+

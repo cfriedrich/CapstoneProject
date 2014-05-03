@@ -1,0 +1,18 @@
+﻿@model LanguageInformant.Domain.Entities.Lesson
+
+@{
+    ViewBag.Title = "Lesson Index";
+}
+
+<table>
+    <tr>
+        <td class="button">
+            @Html.ActionLink("Add Lesson", "Create")
+        </td>
+    </tr>
+    <tr>
+        <td class="button">
+            @Html.ActionLink("List Lessons", "List")
+        </td>
+    </tr>
+</table>
