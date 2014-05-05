@@ -17,12 +17,16 @@
         <div class="front" style="border:dotted medium; background-color:crimson;">
             <div class="pad">
                 <p>Log In to the site here</p>
+                <p>Access Admin Portal (Temp)</p>
             </div>
         </div>
         <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
             <div class="pad">
                 @Html.ActionLink("Log In with existing account", "LogIn", "Account")
+                <br />
                 @Html.ActionLink("Create a new account", "Register", "Account")
+                <br />
+                @Html.ActionLink("Admin Portal", "Index", "Admin")
             </div>
         </div>
     </div>
