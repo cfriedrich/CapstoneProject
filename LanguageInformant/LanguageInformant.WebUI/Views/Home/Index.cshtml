@@ -1,31 +1,72 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "The Language Informant";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<div id="wrapper" style="width:100%;">
+<h1 style="margin-top:5px; margin-bottom:2px;">Welcome to the Language Informant</h1>
+<h2 style="margin-top:0px; margin-bottom:0px;">An exciting way to learn a new language</h2>
+<p style="margin-top:2px; margin-bottom:2px;">This site is still under construction.
+    Minor functionality will be implemented to demonstrate our Alpha Release.
+    Users can hover over tiles below to reveal navigation to other pages in the site. <br />
+    Enjoy!
+</p>
+<div id="content" style="width:100%;">
+<div id="panelRow1" style="width:520px; margin-left:110px;">
+    <div class="hover panel" style="float:left;">
+        <div class="front" style="border:dotted medium; background-color:crimson;">
+            <div class="pad">
+                <p>Log In to the site here</p>
+            </div>
+        </div>
+        <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
+            <div class="pad">
+                @Html.ActionLink("Log In with existing account", "LogIn", "Account")
+                @Html.ActionLink("Create a new account", "Register", "Account")
+            </div>
+        </div>
+    </div>
+    
+    <div class="hover panel" style="float:left; margin-left:20px;">
+        <div class="front" style="border:dotted medium; background-color:crimson;">
+            <div class="pad">
+                <p>Check out our Dictionary here</p>
+            </div>
+        </div>
+        <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
+            <div class="pad">
+                @Html.ActionLink("Dictionary Link", "Dictionary", "Home")
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div id="panelRow2" style="width:520px; margin-left: 110px; " >
+    <div class="hover panel" style="float:left; margin-top:15px;">
+        <div class="front" style="border:dotted medium; background-color:crimson;">
+            <div class="pad">
+                <p>Lessons can be found here</p>
+            </div>
+        </div>
+        <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
+            <div class="pad">
+                @Html.ActionLink("Lesson Link", "Index", "Lesson")
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="hover panel" style="float:left; margin-left:20px; margin-top:15px;">
+        <div class="front"style="border:dotted medium; background-color:crimson;">
+            <div class="pad">
+                <p>Conact Info will be hanging out here</p>
+            </div>
+        </div>
+        <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
+            <div class="pad">
+                @Html.ActionLink("Need to Contact Us?", "Contact", "Home")
+                @Html.ActionLink("Send us some feedback", "Feedback", "Home")
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+</div>
+   
+</div>
 </div>
