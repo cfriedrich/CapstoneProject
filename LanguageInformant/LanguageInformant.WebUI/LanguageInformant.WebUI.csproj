@@ -177,6 +177,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Migrations\201405030453476_InitialCreate.cs" />
+    <Compile Include="Migrations\201405030453476_InitialCreate.Designer.cs">
+      <DependentUpon>201405030453476_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405060602538_PictureMimeType.cs" />
+    <Compile Include="Migrations\201405060602538_PictureMimeType.Designer.cs">
+      <DependentUpon>201405060602538_PictureMimeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405060605510_Picture.cs" />
+    <Compile Include="Migrations\201405060605510_Picture.Designer.cs">
+      <DependentUpon>201405060605510_Picture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405060608312_Picture1.cs" />
+    <Compile Include="Migrations\201405060608312_Picture1.Designer.cs">
+      <DependentUpon>201405060608312_Picture1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\WordViewModel.cs" />
@@ -277,6 +294,20 @@
       <Project>{e1f98ae0-36a8-440f-bdf3-5097839b7314}</Project>
       <Name>LanguageInformant.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405030453476_InitialCreate.resx">
+      <DependentUpon>201405030453476_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405060602538_PictureMimeType.resx">
+      <DependentUpon>201405060602538_PictureMimeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405060605510_Picture.resx">
+      <DependentUpon>201405060605510_Picture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405060608312_Picture1.resx">
+      <DependentUpon>201405060608312_Picture1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

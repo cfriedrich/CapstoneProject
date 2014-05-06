@@ -47,21 +47,43 @@ namespace LanguageInformant.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Meaning meaning)
+        public ActionResult Edit(Meaning meaning, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    meaning.ImageMimeType = image.ContentType;
+                    meaning.Picture = new byte[image.ContentLength];
+                    image.InputStream.Read(meaning.Picture, 0, image.ContentLength);
+                }
                 repository.SaveMeaning(meaning);
                 TempData["message"] = string.Format("{0} has been saved", meaning.Name);
-                return RedirectToAction("List", "Meaning");
+                return RedirectToAction("SaveMeaning", "Meaning", meaning);
             }
             else
             {
-                // There is something wrong with the data values
-
-                return View(meaning);
+                TempData["mesage"] = string.Format("{0} has not been saved", meaning.Name);
+                return RedirectToAction("List", "Meaning", meaning);
             }
         }
+
+        //[HttpPost]
+        //public ActionResult Edit(Meaning meaning)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        repository.SaveMeaning(meaning);
+        //        TempData["message"] = string.Format("{0} has been saved", meaning.Name);
+        //        return RedirectToAction("List", "Meaning");
+        //    }
+        //    else
+        //    {
+        //        // There is something wrong with the data values
+
+        //        return View(meaning);
+        //    }
+        //}
 
         public ViewResult Delete(int meaningId)
         {

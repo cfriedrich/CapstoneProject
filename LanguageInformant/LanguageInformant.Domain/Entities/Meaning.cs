@@ -14,5 +14,7 @@ namespace LanguageInformant.Domain.Entities
         public byte[] Picture { get; set; }
 
         public virtual ICollection<Word> Words { get; set; }
+
+        public string ImageMimeType { get; set; }
     }
 }
