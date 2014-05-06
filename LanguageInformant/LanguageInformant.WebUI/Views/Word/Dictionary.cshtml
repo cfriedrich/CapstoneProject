@@ -1,0 +1,25 @@
+﻿@model LanguageInformant.Domain.Entities.Word
+
+@{
+    ViewBag.Title = "Dictionary";
+}
+
+<h2>Dictionary</h2>
+
+@Html.BeginForm()
+{
+@Html.TextBox("Lookup")
+
+@Html.ListBox("WordList")
+
+@if (Model != null)
+{
+    @Model.Description
+}
+
+
+<label id="Definition"></label>
+
+<input type="submit" value="Lookup Word" />
+}
+

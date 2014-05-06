@@ -196,6 +196,7 @@
     <Content Include="Content\Site2.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\languageinformant.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -256,6 +257,9 @@
     <Content Include="Views\Word\Delete.cshtml" />
     <Content Include="Views\Word\Details.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Word\Dictionary.cshtml" />
+    <Content Include="Views\Word\Definition.cshtml" />
+    <Content Include="Views\Word\EditMeanings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

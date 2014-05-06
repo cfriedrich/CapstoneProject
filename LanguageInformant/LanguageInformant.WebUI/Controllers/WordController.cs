@@ -12,6 +12,7 @@ namespace LanguageInformant.WebUI.Controllers
     public class WordController : Controller
     {
         private IWordRepository repository = new EFWordRepository();
+        LanguageInformantDbContext db = new LanguageInformantDbContext();
 
         //public WordController(IWordRepository wordRepository)
         //{
@@ -39,6 +40,82 @@ namespace LanguageInformant.WebUI.Controllers
             repository.AddWord(word);
             return View();
         }
+
+        public ViewResult EditMeanings(int WordID)
+        {
+            Word word = repository.GetWord(WordID);   
+            
+            var meanings = from m in db.Meanings
+                           select new
+                           {
+                               m.MeaningID,
+                               m.Name,
+                               m.Description
+                           };
+
+            SelectList wordMeanings = new SelectList(word.Meanings, "MeaningID", "Name");
+            SelectList meaningList = new SelectList(meanings.Take(10), "MeaningID", "Name");
+            ViewData["WordMeanings"] = new SelectList(word.Meanings, "MeaningID", "Name");
+            ViewData["MeaningList"] = new SelectList(meanings, "MeaningID", "Name");
+
+            return View(word);
+        }
+
+        [HttpPost]
+        public ViewResult EditMeanings(string MeaningList, int WordID)
+        {
+            Word word = repository.GetWord(WordID);
+            if (MeaningList != null)
+            {
+                int meaningId = int.Parse(MeaningList);
+                
+
+                Meaning meaning = db.Meanings.Find(meaningId);
+
+                var meanings = from m in db.Meanings
+                               select new
+                               {
+                                   m.MeaningID,
+                                   m.Name,
+                                   m.Description
+                               };
+
+                SelectList wordMeanings = new SelectList(word.Meanings.Take(10), "MeaningID", "Name");
+                SelectList meaningList = new SelectList(meanings.Take(10), "MeaningID", "Name");
+                ViewData["WordMeanings"] = new SelectList(word.Meanings, "MeaningID", "Name");
+                ViewData["MeaningList"] = new SelectList(meanings, "MeaningID", "Name");
+
+                repository.AddMeaning(word.WordID, meaningId);
+            }
+            return View(word);
+        }
+
+        //[HttpPost]
+        //public ViewResult EditMeanings(string WordMeanings, string MeaningList, int WordID)
+        //{
+        //    int meaningId = int.Parse(WordMeanings);
+        //    Word word = repository.GetWord(WordID);
+
+        //    Meaning meaning = db.Meanings.Find(meaningId);
+
+        //    var meanings = from m in db.Meanings
+        //                   select new
+        //                   {
+        //                       m.MeaningID,
+        //                       m.Name,
+        //                       m.Description
+        //                   };
+
+        //    SelectList wordMeanings = new SelectList(word.Meanings.Take(10), "MeaningID", "Name");
+        //    SelectList meaningList = new SelectList(meanings.Take(10), "MeaningID", "Name");
+        //    ViewData["WordMeanings"] = new SelectList(word.Meanings, "MeaningID", "Name");
+        //    ViewData["MeaningList"] = new SelectList(meanings, "MeaningID", "Name");
+
+        //    repository.DeleteMeaning(word.WordID, meaningId);
+
+        //    return View();
+        //}
+
 
         public ViewResult Edit(int wordId)
         {
@@ -82,6 +159,49 @@ namespace LanguageInformant.WebUI.Controllers
         {
             Word thisWord = repository.GetWord(wordId);
             return View(thisWord);
+        }
+
+        public ViewResult Dictionary()
+        {
+            LanguageInformantDbContext db = new LanguageInformantDbContext();
+            var words = from w in db.Words
+                           select new
+                           {
+                               w.WordID,
+                               w.Name,
+                               w.Description
+                           };
+
+            SelectList WordList = new SelectList(words, "WordID", "Name");
+            ViewData["WordList"] = new SelectList(words, "WordID", "Name");
+            ViewData["Definition"] = "This";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Dictionary(string WordList)
+        {
+            int wordId = int.Parse(WordList);
+            LanguageInformantDbContext db = new LanguageInformantDbContext();
+            Word word = db.Words.Find(wordId);
+            var words = from w in db.Words
+                        select new
+                        {
+                            w.WordID,
+                            w.Name,
+                            w.Description
+                        };
+
+            ViewData["Definition"] = word.Description;
+            ViewData["WordList"] = new SelectList(words, "WordID", "Name");
+
+            return View();
+        }
+
+        public ViewResult Defintion(int wordId)
+        {
+            return View();
         }
 
     }

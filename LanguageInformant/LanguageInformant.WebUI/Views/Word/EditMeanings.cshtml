@@ -1,0 +1,39 @@
+﻿@model LanguageInformant.Domain.Entities.Word
+
+@{
+    ViewBag.Title = "Edit Meanings";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.WordID)
+    <table id="Editor">
+        <tr>
+            <th align="center">
+                <h2>Editing Meanings for @Model.Name</h2>
+            </th>
+        </tr>
+        <tr>
+            <td align="center">
+            <h4>All Meanings</h4>
+            @Html.ListBox("MeaningList")
+            </td>
+        
+        
+            <td align="center">
+              <h4>Meanings assigned to @Model.Name</h4>
+              @Html.ListBox("WordMeanings")
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="submit" name="add" id="add" value=">>" />
+            </td>
+            <td align="center">
+                <input type="submit" name="remove" id="remove" value="<<" />
+            </td>
+        </tr>
+    </table>
+    
+}
+

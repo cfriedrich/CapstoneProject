@@ -61,6 +61,23 @@ namespace LanguageInformant.Domain.Concrete
             return dbEntry;
         }
 
+        public void AddMeaning(int wordID, int meaningID)
+        {
+            var db = new LanguageInformantDbContext();
+            Word word = db.Words.Find(wordID);
+            Meaning meaning = db.Meanings.Find(meaningID);
+            word.Meanings.Add(meaning);
+            db.SaveChanges();
+        }
+
+        public void DeleteMeaning(int wordID, int meaningID)
+        {
+            var db = new LanguageInformantDbContext();
+            Word word = db.Words.Find(wordID);
+            Meaning meaning = db.Meanings.Find(meaningID);
+            word.Meanings.Remove(meaning);
+            db.SaveChanges();
+        }
 
 
         public Word GetWord(int wordID)

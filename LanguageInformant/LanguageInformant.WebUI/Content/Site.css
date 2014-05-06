@@ -155,3 +155,15 @@ table#Menu {
     -webkit-transform: rotateX(0deg) rotateY(0deg);
     -moz-transform: rotateX(0deg) rotateY(0deg);
 }
+
+#WordMeanings {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#MeaningList {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
