@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Picture)
+            @Html.DisplayNameFor(model => model.ImageData)
         </th>
         <th></th>
     </tr>
@@ -32,10 +32,17 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Picture)
-        </td>
+            @if (item.ImageData == null)
+            {
+                @:None
+            }
+            else
+            {
+            <img width="75" height="75" src="@Url.Action("GetPicture", "Meaning", new { item.MeaningID })" />
+            }
+                </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { item.MeaningID }) |
+            @Html.ActionLink("Edit", "EditMeaning", new { item.MeaningID }) |
             @Html.ActionLink("Details", "Details", new { item.MeaningID }) |
             @Html.ActionLink("Delete", "Delete", new { item.MeaningID })
         </td>

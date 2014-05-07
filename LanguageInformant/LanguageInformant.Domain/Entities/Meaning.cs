@@ -11,7 +11,7 @@ namespace LanguageInformant.Domain.Entities
         public int MeaningID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public byte[] Picture { get; set; }
+        public byte[] ImageData { get; set; }
 
         public virtual ICollection<Word> Words { get; set; }
 

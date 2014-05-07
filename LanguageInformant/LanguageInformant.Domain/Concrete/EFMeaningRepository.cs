@@ -10,6 +10,7 @@ namespace LanguageInformant.Domain.Concrete
 {
     public class EFMeaningRepository : IMeaningRepository
     {
+        private LanguageInformantDbContext context = new LanguageInformantDbContext();
 
         public IQueryable<Meaning> GetMeanings()
         {
@@ -26,23 +27,22 @@ namespace LanguageInformant.Domain.Concrete
 
         public void SaveMeaning(Meaning meaning)
         {
-            var db = new LanguageInformantDbContext();
-
-            if (meaning.MeaningID == 0)
+           if (meaning.MeaningID == 0)
             {
-                db.Meanings.Add(meaning);
-                db.SaveChanges();
+                context.Meanings.Add(meaning);
+                context.SaveChanges();
             }
             else
             {
-                Meaning dbEntry = db.Meanings.Find(meaning.MeaningID);
+                Meaning dbEntry = context.Meanings.Find(meaning.MeaningID);
                 if (dbEntry != null)
                 {
                     dbEntry.Name = meaning.Name;
                     dbEntry.Description = meaning.Description;
-                    dbEntry.Picture = meaning.Picture;
+                    dbEntry.ImageData = meaning.ImageData;
+                    dbEntry.ImageMimeType = meaning.ImageMimeType;
                     dbEntry.Words = meaning.Words;
-                    db.SaveChanges();
+                    context.SaveChanges();
                 }
             }
         }

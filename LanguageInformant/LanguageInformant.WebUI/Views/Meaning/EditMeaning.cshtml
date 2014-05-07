@@ -1,0 +1,25 @@
+﻿@model LanguageInformant.Domain.Entities.Meaning
+
+@{
+    ViewBag.Title = "Edit Meaning";
+}
+
+@using (Html.BeginForm("EditMeaning", "Meaning", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.EditorForModel()
+
+    <div class="editor-label">Picture</div>
+    <div class="editor-field">
+        @if (Model.ImageData == null)
+        {
+            @:None
+        }
+        else
+        {
+            <img width="150" height="150" src="@Url.Action("GetPicture", "Meaning", new { Model.MeaningID })" />
+        }
+        <div>Upload new image: <input type="file" name="image" /></div>
+    </div>
+    <input type="submit" value="Save" />
+    @Html.ActionLink("Cancel and return to List", "List")
+}
