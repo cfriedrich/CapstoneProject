@@ -80,12 +80,44 @@ namespace LanguageInformant.WebUI.Controllers
                                    m.Description
                                };
 
+                repository.AddMeaning(word.WordID, meaningId);
+
                 SelectList wordMeanings = new SelectList(word.Meanings.Take(10), "MeaningID", "Name");
                 SelectList meaningList = new SelectList(meanings.Take(10), "MeaningID", "Name");
                 ViewData["WordMeanings"] = new SelectList(word.Meanings, "MeaningID", "Name");
                 ViewData["MeaningList"] = new SelectList(meanings, "MeaningID", "Name");
 
-                repository.AddMeaning(word.WordID, meaningId);
+                
+            }
+            return View(word);
+        }
+
+        public ViewResult DeleteMeanings(string WordMeanings, int WordID)
+        {
+            Word word = repository.GetWord(WordID);
+            if (WordMeanings != null)
+            {
+                int meaningId = int.Parse(WordMeanings);
+
+
+                Meaning meaning = db.Meanings.Find(meaningId);
+
+                var meanings = from m in db.Meanings
+                               select new
+                               {
+                                   m.MeaningID,
+                                   m.Name,
+                                   m.Description
+                               };
+
+                repository.RemoveMeaning(word.WordID, meaningId);
+
+                SelectList wordMeanings = new SelectList(word.Meanings.Take(10), "MeaningID", "Name");
+                SelectList meaningList = new SelectList(meanings.Take(10), "MeaningID", "Name");
+                ViewData["WordMeanings"] = new SelectList(word.Meanings, "MeaningID", "Name");
+                ViewData["MeaningList"] = new SelectList(meanings, "MeaningID", "Name");
+
+
             }
             return View(word);
         }

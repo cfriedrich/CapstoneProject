@@ -15,14 +15,14 @@
         </tr>
         <tr>
             <td align="center">
-            <h4>All Meanings</h4>
-            @Html.ListBox("MeaningList")
+                <h4>All Meanings</h4>
+                @Html.ListBox("MeaningList")
             </td>
-        
-        
+
+
             <td align="center">
-              <h4>Meanings assigned to @Model.Name</h4>
-              @Html.ListBox("WordMeanings")
+                <h4>Meanings assigned to @Model.Name</h4>
+                @Html.ListBox("WordMeanings")
             </td>
         </tr>
         <tr>
@@ -31,10 +31,9 @@
             </td>
             <td align="center">
                 @Html.ActionLink("Delete Meaning", "DeleteMeanings", "Word", Model.WordID)
-                @*<input type="submit" name="remove" id="remove" value="<<" />*@
             </td>
         </tr>
     </table>
-    
+
 }
 

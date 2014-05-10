@@ -70,7 +70,7 @@ namespace LanguageInformant.Domain.Concrete
             db.SaveChanges();
         }
 
-        public void DeleteMeaning(int wordID, int meaningID)
+        public void RemoveMeaning(int wordID, int meaningID)
         {
             var db = new LanguageInformantDbContext();
             Word word = db.Words.Find(wordID);

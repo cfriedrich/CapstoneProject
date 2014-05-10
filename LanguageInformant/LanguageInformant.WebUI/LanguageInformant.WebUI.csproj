@@ -278,6 +278,7 @@
     <Content Include="Views\Word\Definition.cshtml" />
     <Content Include="Views\Word\EditMeanings.cshtml" />
     <Content Include="Views\Meaning\EditMeaning.cshtml" />
+    <Content Include="Views\Word\DeleteMeanings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -16,6 +16,6 @@ namespace LanguageInformant.Domain.Abstract
         void SaveWord(Word word);
         Word DeleteWord(int wordID);
         void AddMeaning(int wordID, int meaningID);
-        void DeleteMeaning(int wordID, int meaningID);
+        void RemoveMeaning(int wordID, int meaningID);
     }
 }
