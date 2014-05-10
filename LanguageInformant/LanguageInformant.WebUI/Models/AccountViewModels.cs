@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using System;
 namespace LanguageInformant.WebUI.Models
 {
     public class ExternalLoginConfirmationViewModel
@@ -59,5 +59,49 @@ namespace LanguageInformant.WebUI.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "First Name Required")]
+        [Display(Name = "First Name:")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string FirstName { get; set; }
+        
+        [Required(ErrorMessage = "Last Name Required")]
+        [Display(Name = "Last Name:")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "EmailId Required:")]
+        [Display(Name = "Email:")]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$",
+                                                ErrorMessage = "Email Format is wrong")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Street Address Required")]
+        [Display(Name = "Street Address:")]
+        [StringLength(100, ErrorMessage = "Less than 100 characters")]
+        public string StreetAddress { get; set; }
+
+
+        [Required(ErrorMessage = "City Required")]
+        [Display(Name = "City:")]
+        [RegularExpression(@"^[a-zA-Z'.\s]{1,40}$", ErrorMessage = "Special Characters not allowed")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string City { get; set; }
+
+        [Required(ErrorMessage = "State Required")]
+        [Display(Name = "State:")]
+        [RegularExpression(@"^[a-zA-Z'.\s]{1,40}$", ErrorMessage = "Special Characters not allowed")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string State { get; set; }
+
+        [Required(ErrorMessage = "ZipCode Required")]
+        [Display(Name = "Zip Code:")]
+        [StringLength(20, ErrorMessage = "Less than 20 characters")]
+        public string ZipCode { get; set; }
+
+        [Display(Name = "Country:")]
+        [StringLength(20, ErrorMessage = "Less than 20 characters")]
+        public string Country { get; set; }
     }
 }
