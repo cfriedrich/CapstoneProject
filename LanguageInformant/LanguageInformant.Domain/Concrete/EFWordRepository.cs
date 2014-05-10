@@ -79,13 +79,20 @@ namespace LanguageInformant.Domain.Concrete
             db.SaveChanges();
         }
 
-
         public Word GetWord(int wordID)
         {
             var db = new LanguageInformantDbContext();
             Word dbEntry = db.Words.Find(wordID);
 
             return dbEntry;
+        }
+
+        public Word GetWord(string word)
+        {
+            var db = new LanguageInformantDbContext();
+            return (from w in db.Words
+                    where w.Name == word
+                    select w).FirstOrDefault(); 
         }
     }
 }

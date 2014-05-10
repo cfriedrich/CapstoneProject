@@ -11,6 +11,7 @@ namespace LanguageInformant.Domain.Abstract
     {
         IQueryable<Word> GetWords();
 
+        Word GetWord(string word);
         Word GetWord(int wordID);
         void AddWord(Word word);
         void SaveWord(Word word);

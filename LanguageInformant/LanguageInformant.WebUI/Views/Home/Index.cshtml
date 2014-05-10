@@ -3,7 +3,7 @@
     ViewBag.Title = "The Language Informant";
 }
 
-<div id="wrapper" style="width:100%;">
+<div id="wrapper" style="width:100%; padding:10px;">
 <h1 style="margin-top:5px; margin-bottom:2px;">Welcome to the Language Informant</h1>
 <h2 style="margin-top:0px; margin-bottom:0px;">An exciting way to learn a new language</h2>
 <p style="margin-top:2px; margin-bottom:2px;">This site is still under construction.
@@ -12,7 +12,7 @@
     Enjoy!
 </p>
 <div id="content" style="width:100%;">
-<div id="panelRow1" style="width:520px; margin-left:110px;">
+<div id="panelRow1" style="width:375px; margin-left:110px;">
     <div class="hover panel" style="float:left;">
         <div class="front" style="border:dotted medium; background-color:crimson;">
             <div class="pad">
@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-<div id="panelRow2" style="width:520px; margin-left: 110px; " >
+<div id="panelRow2" style="width:375px; margin-left: 110px; " >
     <div class="hover panel" style="float:left; margin-top:15px;">
         <div class="front" style="border:dotted medium; background-color:crimson;">
             <div class="pad">
@@ -54,6 +54,7 @@
         <div class="back" style="border:dotted medium; background-color:ButtonShadow;">
             <div class="pad">
                 @Html.ActionLink("Lesson Link", "Index", "Lesson")
+                @Html.ActionLink("Course Page", "Course", "Home")
             </div>
         </div>
     </div>
@@ -73,4 +74,7 @@
 </div>
    
 </div>
+<div id="imageBox" style="width:150px; height:300px; margin-left:500px; border:dotted medium; ">
+
+    </div>
 </div>
