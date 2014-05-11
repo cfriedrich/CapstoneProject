@@ -13,7 +13,6 @@ namespace LanguageInformant.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        EFWordRepository wordRepo;
 
         public ActionResult Index()
         {
