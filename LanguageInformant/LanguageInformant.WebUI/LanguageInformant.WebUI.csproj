@@ -177,31 +177,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LessonController.cs" />
     <Compile Include="Controllers\MeaningController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\WordController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
-    <Compile Include="Migrations\201405030453476_InitialCreate.cs" />
-    <Compile Include="Migrations\201405030453476_InitialCreate.Designer.cs">
-      <DependentUpon>201405030453476_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201405060602538_PictureMimeType.cs" />
-    <Compile Include="Migrations\201405060602538_PictureMimeType.Designer.cs">
-      <DependentUpon>201405060602538_PictureMimeType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201405060605510_Picture.cs" />
-    <Compile Include="Migrations\201405060605510_Picture.Designer.cs">
-      <DependentUpon>201405060605510_Picture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201405060608312_Picture1.cs" />
-    <Compile Include="Migrations\201405060608312_Picture1.Designer.cs">
-      <DependentUpon>201405060608312_Picture1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201405110415012_Changes.cs" />
-    <Compile Include="Migrations\201405110415012_Changes.Designer.cs">
-      <DependentUpon>201405110415012_Changes.cs</DependentUpon>
+    <Compile Include="Migrations\201405142217247_New.cs" />
+    <Compile Include="Migrations\201405142217247_New.Designer.cs">
+      <DependentUpon>201405142217247_New.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -227,6 +212,7 @@
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\languageinformant %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -304,6 +290,7 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Member\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,20 +310,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201405030453476_InitialCreate.resx">
-      <DependentUpon>201405030453476_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201405060602538_PictureMimeType.resx">
-      <DependentUpon>201405060602538_PictureMimeType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201405060605510_Picture.resx">
-      <DependentUpon>201405060605510_Picture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201405060608312_Picture1.resx">
-      <DependentUpon>201405060608312_Picture1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201405110415012_Changes.resx">
-      <DependentUpon>201405110415012_Changes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201405142217247_New.resx">
+      <DependentUpon>201405142217247_New.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

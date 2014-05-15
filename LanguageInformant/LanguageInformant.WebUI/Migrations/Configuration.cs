@@ -10,7 +10,7 @@ namespace LanguageInformant.WebUI.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "LanguageInformant.WebUI.Models.ApplicationDbContext";
+            //ContextKey = "LanguageInformant.WebUI.Models.ApplicationDbContext";
         }
 
         protected override void Seed(LanguageInformant.WebUI.Models.ApplicationDbContext context)

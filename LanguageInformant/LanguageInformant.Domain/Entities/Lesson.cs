@@ -13,6 +13,7 @@ namespace LanguageInformant.Domain.Entities
         public string Description { get; set; }
 
         public virtual Unit Unit { get; set; }
+        public virtual ICollection<Member> Members { get; set; }
         public virtual ICollection<Scene> Scenes { get; set; }
         public virtual ICollection<Vocabulary> Vocabularies { get; set; }
     }

@@ -3,7 +3,7 @@ namespace LanguageInformant.WebUI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class New : DbMigration
     {
         public override void Up()
         {
