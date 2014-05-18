@@ -38,9 +38,11 @@
         <div style="padding:10px;">
             <u>User Currently Logged In</u>
             @Html.Partial("_LoginPartial")
+            <br />
+                @Html.ActionLink("Help", "About", "Home")
             <br /><br />
             <p>Is this not you? <br />
-               click here to log out.
+               click <a href="javascript:document.getElementById('logoutForm').submit()">HERE</a> to log out.
             </p>
         </div>
         <div style="padding:10px;">
