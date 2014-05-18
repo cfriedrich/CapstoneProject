@@ -18,6 +18,9 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Language)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Sound)
         </th>
         <th>
@@ -34,6 +37,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
+        <th>
+            @*@if(item.Language != null)
+            {
+            @Html.DisplayFor(modelItem => item.Language.Name)
+            }*@
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Sound)
         </td>

@@ -1,28 +1,51 @@
-﻿@model LanguageInformant.WebUI.Models.WordViewModel
+﻿@model LanguageInformant.Domain.Entities.Word  
+@using LanguageInformant.Domain.Entities
 
 @{
     ViewBag.Title = "ShowWord";
     
 }
-<h2 style="margin-left:25px;">@ViewBag.Title</h2>
+<h2 style="margin-left:25px;">@Model.Name</h2>
 <div id="wrapper" style="width:100%; padding:10px;">
     <div id="audioBox" style="border:dashed medium; width:100px; height:100px; float:right; margin-right:25px; padding:5px;">
         <p>audio goes here</p>
     </div>
     <div id="container1" style="border:dashed medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
         
-        <p>Show the word from previous textbox. Redisplay based on Language <br />
+        <p>Word language: @Model.Language.Name</p>
+
+        @foreach (Meaning m in Model.Meanings)
+        {
+            
+        <p>English Translation: @m.Name</p>
+        <p>@m.Description</p>    
+
+        @*<p>Show the word from previous textbox. Redisplay based on Language <br />
            Display drop down box for language choice <br />
            Definition: 
 
-        </p>
-
+        </p>*@
+        }
     </div>
     <div id="container2" style="border:dashed medium; width:250px; height:250px; float:left; margin-left:5px; padding:10px; ">
-        <p>image goes here</p>
+            {
+            <p>
+                @Model.Meanings.First().Name
+            </p>
+                <p>
+                    <img width="225" height="225" src="@Url.Action("GetPicture", "Meaning", new { @Model.Meanings.First().MeaningID })" />
+                </p>
+            }
     </div>
     <div id="synonymBox" style="border:dashed medium; width:250px; height:105px; float:left; margin-left:5px; margin-top:5px; padding:10px; "> 
-        <p>Possible synonyms will be displayed here</p>
+        <h3>Synonyms</h3>
+        @foreach (Meaning meaning in @Model.Meanings)
+        {
+            foreach (Word word in meaning.Words)
+            {
+                <p>@Html.ActionLink(@word.Name, "ShowWord", "Home", @word.Name)</p>
+            }
+        }
     </div>
     
 

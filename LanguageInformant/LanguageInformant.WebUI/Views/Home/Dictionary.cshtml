@@ -1,4 +1,4 @@
-﻿@model LanguageInformant.WebUI.Models.WordViewModel
+﻿@model LanguageInformant.Domain.Entities.Word
 
 @{
     ViewBag.Title = "Dictionary";
@@ -10,7 +10,8 @@
         @using (Html.BeginForm())
         {
             <p>Please enter the word that you would like to search for.</p>
-            <!--<p>Your word: @Html.TextBoxFor(x=> x.word)</p>-->
+            <p>@Html.TextBoxFor(w=> w.Name )</p>
+            
             <input type="submit" value="Show me the meaning" />
             <p>@ViewBag.errorWord</p>
         }

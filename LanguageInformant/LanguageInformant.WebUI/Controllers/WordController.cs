@@ -31,13 +31,22 @@ namespace LanguageInformant.WebUI.Controllers
 
         public ViewResult Create()
         {
+            SelectList Languages = new SelectList(db.Languages.Take(10), "LanguageID", "Name");
+            ViewData["Languages"] = new SelectList(db.Languages, "LanguageID", "Name");
             return View();
         }
 
         [HttpPost]
-        public ViewResult Create(Word word)
+        public ViewResult Create(Word word, string languages)
         {
+            int languageId = int.Parse(languages);
+            Language thisLanguage = db.Languages.Find(languageId);
+            word.Language = thisLanguage;
             repository.AddWord(word);
+            
+            SelectList Languages = new SelectList(db.Languages.Take(10), "LanguageID", "Name");
+            ViewData["Languages"] = new SelectList(db.Languages, "LanguageID", "Name");
+            
             return View();
         }
 

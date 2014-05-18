@@ -14,6 +14,9 @@ namespace LanguageInformant.WebUI.Controllers
     public class HomeController : Controller
     {
 
+        private IWordRepository repository = new EFWordRepository();
+        LanguageInformantDbContext db = new LanguageInformantDbContext();
+
         public ActionResult Index()
         {
             return View();
@@ -21,17 +24,18 @@ namespace LanguageInformant.WebUI.Controllers
 
         public ViewResult Dictionary()
         {
-            var wordModel = new WordViewModel();
-            return View(wordModel);
+            return View();
         }
 
         [HttpPost]
-        public ActionResult Dictionary(WordViewModel wordModel)
+        public ViewResult Dictionary(string Name)
         {
-            return RedirectToAction("ShowWord");
+            Word word = repository.GetWord(Name);
+
+            return View("ShowWord", word);
         }
 
-        public ViewResult ShowWord(string word)
+        public ViewResult ShowWord(Word word)
         {
             /*
             Word newWord = wordRepo.GetWord(word);
