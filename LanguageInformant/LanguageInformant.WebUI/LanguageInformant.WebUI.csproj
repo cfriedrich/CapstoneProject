@@ -179,6 +179,7 @@
     <Compile Include="Controllers\MeaningController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\VocabularyController.cs" />
     <Compile Include="Controllers\WordController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -293,6 +294,14 @@
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
+    <Content Include="Views\Vocabulary\Index.cshtml" />
+    <Content Include="Views\Vocabulary\List.cshtml" />
+    <Content Include="Views\Vocabulary\Create.cshtml" />
+    <Content Include="Views\Vocabulary\Edit.cshtml" />
+    <Content Include="Views\Vocabulary\Delete.cshtml" />
+    <Content Include="Views\Vocabulary\Details.cshtml" />
+    <Content Include="Views\Vocabulary\EditWords.cshtml" />
+    <Content Include="Views\Vocabulary\DeleteWords.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,6 +32,8 @@ namespace LanguageInformant.WebUI.Infrastructure
             ninjectKernel.Bind<IWordRepository>().To<EFWordRepository>();
             ninjectKernel.Bind<IMeaningRepository>().To<EFMeaningRepository>();
             ninjectKernel.Bind<ILessonRepository>().To<EFLessonRepository>();
+            ninjectKernel.Bind<IVocabularyRepository>().To<EFVocabularyRepository>();
+            ninjectKernel.Bind<ILessonRepository>().To<EFLessonRepository>();
         }
 
 

@@ -29,6 +29,7 @@ namespace LanguageInformant.WebUI.Controllers
             return View(repository.GetWords());
         }
 
+
         public ViewResult Create()
         {
             SelectList Languages = new SelectList(db.Languages.Take(10), "LanguageID", "Name");
@@ -41,8 +42,8 @@ namespace LanguageInformant.WebUI.Controllers
         {
             int languageId = int.Parse(languages);
             Language thisLanguage = db.Languages.Find(languageId);
-            word.Language = thisLanguage;
-            repository.AddWord(word);
+            this.repository.AddWord(word);
+            this.repository.AddLanguage(word.WordID, languageId);
             
             SelectList Languages = new SelectList(db.Languages.Take(10), "LanguageID", "Name");
             ViewData["Languages"] = new SelectList(db.Languages, "LanguageID", "Name");

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<LanguageInformant.Domain.Entities.Word>
+@using LanguageInformant.Domain.Entities
 
 @{
     ViewBag.Title = "List";
@@ -38,10 +39,6 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <th>
-            @*@if(item.Language != null)
-            {
-            @Html.DisplayFor(modelItem => item.Language.Name)
-            }*@
         </th>
         <td>
             @Html.DisplayFor(modelItem => item.Sound)

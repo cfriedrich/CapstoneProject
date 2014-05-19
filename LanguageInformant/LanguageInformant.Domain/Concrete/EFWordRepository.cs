@@ -8,25 +8,24 @@ using System.Threading.Tasks;
 
 namespace LanguageInformant.Domain.Concrete
 {
+
     public class EFWordRepository : IWordRepository
     {
+         LanguageInformantDbContext db = new LanguageInformantDbContext();
 
         public IQueryable<Word> GetWords()
         {
-            var db = new LanguageInformantDbContext();
             return (from w in db.Words select w);
         }
 
         public void AddWord(Word word)
         {
-            var db = new LanguageInformantDbContext();
             db.Words.Add(word);
             db.SaveChanges();
         }
 
         public void SaveWord(Word word)
         {
-            var db = new LanguageInformantDbContext();
 
             if (word.WordID == 0)
             {
@@ -51,7 +50,6 @@ namespace LanguageInformant.Domain.Concrete
 
         public Word DeleteWord(int wordID)
         {
-            var db = new LanguageInformantDbContext();
             Word dbEntry = db.Words.Find(wordID);
             if (dbEntry != null)
             {
@@ -63,7 +61,6 @@ namespace LanguageInformant.Domain.Concrete
 
         public void AddMeaning(int wordID, int meaningID)
         {
-            var db = new LanguageInformantDbContext();
             Word word = db.Words.Find(wordID);
             Meaning meaning = db.Meanings.Find(meaningID);
             word.Meanings.Add(meaning);
@@ -72,16 +69,22 @@ namespace LanguageInformant.Domain.Concrete
 
         public void RemoveMeaning(int wordID, int meaningID)
         {
-            var db = new LanguageInformantDbContext();
             Word word = db.Words.Find(wordID);
             Meaning meaning = db.Meanings.Find(meaningID);
             word.Meanings.Remove(meaning);
             db.SaveChanges();
         }
 
+        public void AddLanguage(int wordID, int languageID)
+        {
+            Word word = db.Words.Find(wordID);
+            Language language = db.Languages.Find(languageID);
+            word.Language = language;
+            db.SaveChanges();
+        }
+
         public Word GetWord(int wordID)
         {
-            var db = new LanguageInformantDbContext();
             Word dbEntry = db.Words.Find(wordID);
 
             return dbEntry;
@@ -89,10 +92,16 @@ namespace LanguageInformant.Domain.Concrete
 
         public Word GetWord(string word)
         {
-            var db = new LanguageInformantDbContext();
             return (from w in db.Words
                     where w.Name == word
                     select w).FirstOrDefault(); 
+        }
+
+        public Language GetLanguage(int languageID)
+        {
+            return (from l in db.Languages
+                    where l.LanguageID == languageID
+                    select l).FirstOrDefault();
         }
     }
 }

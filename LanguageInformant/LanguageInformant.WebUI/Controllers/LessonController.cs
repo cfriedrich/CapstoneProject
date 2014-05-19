@@ -12,6 +12,7 @@ namespace LanguageInformant.WebUI.Controllers
     public class LessonController : Controller
     {
         private ILessonRepository repository = new EFLessonRepository();
+        LanguageInformantDbContext db = new LanguageInformantDbContext();
 
         //public LessonController(ILessonRepository lessonRepository)
         //{

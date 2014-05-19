@@ -49,10 +49,12 @@
     <Compile Include="Abstract\ILessonRepository.cs" />
     <Compile Include="Abstract\IMeaningRepository.cs" />
     <Compile Include="Abstract\IMemberRepository.cs" />
+    <Compile Include="Abstract\IVocabularyRepository.cs" />
     <Compile Include="Abstract\IWordRepository.cs" />
     <Compile Include="Concrete\EFLessonRespository.cs" />
     <Compile Include="Concrete\EFMeaningRepository.cs" />
     <Compile Include="Concrete\EFMemberRepository.cs" />
+    <Compile Include="Concrete\EFVocabularyRepository.cs" />
     <Compile Include="Concrete\EFWordRepository.cs" />
     <Compile Include="Concrete\LanguageInformantDbContext.cs" />
     <Compile Include="Entities\Helper.cs" />
