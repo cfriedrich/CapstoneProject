@@ -13,7 +13,7 @@ namespace LanguageInformant.WebUI.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201405142217247_New"; }
+            get { return "201405200144451_New"; }
         }
         
         string IMigrationMetadata.Source

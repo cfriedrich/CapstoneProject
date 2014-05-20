@@ -78,7 +78,8 @@ namespace LanguageInformant.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser() { UserName = model.UserName, FirstName = model.FirstName, LastName = model.LastName, StreetAddress = model.StreetAddress,
+                Email = model.Email, City = model.City, State = model.State, ZipCode = model.ZipCode, Country = model.Country};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

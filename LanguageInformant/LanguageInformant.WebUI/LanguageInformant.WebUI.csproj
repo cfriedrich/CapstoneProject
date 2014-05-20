@@ -185,9 +185,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
-    <Compile Include="Migrations\201405142217247_New.cs" />
-    <Compile Include="Migrations\201405142217247_New.Designer.cs">
-      <DependentUpon>201405142217247_New.cs</DependentUpon>
+    <Compile Include="Migrations\201405200144451_New.cs" />
+    <Compile Include="Migrations\201405200144451_New.Designer.cs">
+      <DependentUpon>201405200144451_New.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -321,8 +321,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201405142217247_New.resx">
-      <DependentUpon>201405142217247_New.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201405200144451_New.resx">
+      <DependentUpon>201405200144451_New.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
