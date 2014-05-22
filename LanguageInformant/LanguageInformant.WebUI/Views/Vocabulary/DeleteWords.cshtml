@@ -2,7 +2,7 @@
 
 
 @{
-    ViewBag.Title = "Edit Words";
+    ViewBag.Title = "Delete Words";
 }
 
 @using (Html.BeginForm())
@@ -11,15 +11,10 @@
     <table id="Editor">
         <tr>
             <th align="center">
-                <h2>Editing Words for @Model.Name</h2>
+                <h2>Deleting Words for @Model.Name</h2>
             </th>
         </tr>
         <tr>
-            <td align="center">
-                <h4>All Words</h4>
-                @Html.ListBox("WordList")
-            </td>
-
 
             <td align="center">
                 <h4>Words assigned to @Model.Name</h4>
@@ -28,10 +23,10 @@
         </tr>
         <tr>
             <td align="center">
-                <input type="submit" name="add" id="add" value=">>" />
+                <input type="submit" name="delete" id="delete" value="Delete" />
             </td>
             <td align="center">
-                @Html.ActionLink("Delete Word", "DeleteWords", "Vocabulary")
+                @Html.ActionLink("Assign Words", "AssignWords", new { Model.VocabularyID })
                 @*<input type="submit" name="remove" id="remove" value="<<" />*@
             </td>
         </tr>

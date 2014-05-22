@@ -86,7 +86,7 @@ namespace LanguageInformant.WebUI.Controllers
             return View(vocabulary);
         }
 
-        public ViewResult EditWords(int VocabularyID)
+        public ViewResult AssignWords(int VocabularyID)
         {
             Vocabulary vocabulary = repository.GetVocabulary(VocabularyID);
 
@@ -107,7 +107,7 @@ namespace LanguageInformant.WebUI.Controllers
         }
 
         [HttpPost]
-        public ViewResult EditWords(string WordList, int VocabularyID)
+        public ViewResult AssignWords(string WordList, int VocabularyID)
         {
             Vocabulary vocabulary = repository.GetVocabulary(VocabularyID); 
             
@@ -138,35 +138,63 @@ namespace LanguageInformant.WebUI.Controllers
             return View(vocabulary);
         }
 
+        public ViewResult DeleteWords(int VocabularyID)
+        {
+            if (ModelState.IsValid)
+            {
+                Vocabulary vocabulary = repository.GetVocabulary(VocabularyID);
+
+                var words = from w in db.Words
+                            select new
+                            {
+                                w.WordID,
+                                w.Name,
+                                w.Description
+                            };
+
+                SelectList vocabularyWords = new SelectList(vocabulary.Words, "WordID", "Name");
+                //SelectList wordList = new SelectList(words.Take(10), "WordID", "Name");
+                ViewData["VocabularyWords"] = new SelectList(vocabulary.Words, "WordID", "Name");
+                //ViewData["WordList"] = new SelectList(words, "WordID", "Name");
+
+                return View(vocabulary);
+            }
+            return View();
+        }
+
         [HttpPost]
         public ViewResult DeleteWords(string VocabularyWords, int VocabularyID)
         {
-            Vocabulary vocabulary = repository.GetVocabulary(VocabularyID);
-            if (VocabularyWords != null)
+            if (ModelState.IsValid)
             {
-                int wordId = int.Parse(VocabularyWords);
+                Vocabulary vocabulary = repository.GetVocabulary(VocabularyID);
+                if (VocabularyWords != null)
+                {
+                    int wordId = int.Parse(VocabularyWords);
 
 
-                Word word = db.Words.Find(wordId);
+                    Word word = db.Words.Find(wordId);
 
-                var words = from w in db.Words
-                               select new
-                               {
-                                   w.WordID,
-                                   w.Name,
-                                   w.Description
-                               };
+                    var words = from w in db.Words
+                                select new
+                                {
+                                    w.WordID,
+                                    w.Name,
+                                    w.Description
+                                };
 
-                repository.RemoveWord(vocabulary.VocabularyID, wordId);
+                    repository.RemoveWord(vocabulary.VocabularyID, wordId);
 
-                SelectList vocabularyWords = new SelectList(vocabulary.Words, "WordID", "Name");
-                SelectList wordList = new SelectList(words.Take(10), "WordID", "Name");
-                ViewData["VocabularyWords"] = new SelectList(vocabulary.Words, "WordID", "Name");
-                ViewData["WordList"] = new SelectList(words, "WordID", "Name");
+                    SelectList vocabularyWords = new SelectList(vocabulary.Words, "WordID", "Name");
+                    //SelectList wordList = new SelectList(words.Take(10), "WordID", "Name");
+                    ViewData["VocabularyWords"] = new SelectList(vocabulary.Words, "WordID", "Name");
+                    //ViewData["WordList"] = new SelectList(words, "WordID", "Name");
 
 
+                }
+                return View(vocabulary);
             }
-            return View(vocabulary);
+            return View();
         }
     }
 }

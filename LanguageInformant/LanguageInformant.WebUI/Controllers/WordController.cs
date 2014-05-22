@@ -3,6 +3,7 @@ using LanguageInformant.Domain.Concrete;
 using LanguageInformant.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -182,6 +183,38 @@ namespace LanguageInformant.WebUI.Controllers
             }
         }
 
+        public ViewResult EditWord(int wordId)
+        {
+            Word thisWord = repository.GetWord(wordId);
+            return View(thisWord);
+        }
+
+        [HttpPost]
+        public ActionResult EditWord(Word word, HttpPostedFileBase sound)
+        {
+            if (ModelState.IsValid)
+            {
+                if (sound != null)
+                {
+                    using (BinaryReader br = new BinaryReader(sound.InputStream))
+                    {
+                        byte[] bytes = br.ReadBytes((int)sound.InputStream.Length);
+                    }
+                    word.ContentType = sound.ContentType;
+                    word.Sound = new byte[sound.ContentLength];
+                    sound.InputStream.Read(word.Sound, 0, sound.ContentLength);
+                }
+                repository.SaveWord(word);
+                TempData["message"] = string.Format("{0} has been saved", word.Name);
+                return RedirectToAction("List");
+            }
+            else
+            {
+                // there is something wrong with the data values
+                return View(word);
+            }
+        }
+
         public ViewResult Delete(int wordId)
         {
             Word thisWord = repository.GetWord(wordId);
@@ -244,6 +277,19 @@ namespace LanguageInformant.WebUI.Controllers
         public ViewResult Defintion(int wordId)
         {
             return View();
+        }
+
+        public FileContentResult GetSound(int wordId)
+        {
+            Word word = repository.GetWord(wordId);
+            if (word != null)
+            {
+                return File(word.Sound, word.ContentType);
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }

@@ -30,12 +30,12 @@
         <img src="~/Content/Images/Logo.png" alt="LanguageInformantLogo" style="width:inherit; height:inherit;" />
     </div>
     </div>
-    <div id="breadcrumbNav" style="width:600px; height:20px; margin-top:10px; margin-left:165px; border:dotted medium;">
-        @Html.MvcSiteMap().SiteMapPath()
+    <div id="breadcrumbNav" style="width:600px; height:30px; margin-top:10px; margin-left:165px; border:dotted medium;">
+        <p>@Html.MvcSiteMap().SiteMapPath()</p>
     </div>
     <div id="userCourseBox" style="width:150px; height:400px; margin-top:50px; border:dotted medium; float:left;">
-        <div style="padding:10px;">
-            <u>User Currently Logged In</u>
+
+        
             @Html.Partial("_LoginPartial")
             <br />
                 @Html.ActionLink("Help", "About", "Home")
@@ -43,14 +43,12 @@
             <p>Is this not you? <br />
                click <a href="javascript:document.getElementById('logoutForm').submit()">HERE</a> to log out.
             </p>
-        </div>
-        <div style="padding:10px;">
+
             <u>Lessons user has access to:</u>
             <ul>
                 <li>Comprehension</li>
                 <li>Matching</li>
             </ul>
-        </div>
     </div>
 
     <div id="contentBox" style="width:750px; height:500px; margin-top:5px; margin-left:10px; border:dashed medium; float:left;">

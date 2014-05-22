@@ -32,6 +32,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Sound)
+            <audio controls src="@Url.Action("LoadAudio", new { id = Model.WordID } )"/>
         </dd>
 
         <dt>

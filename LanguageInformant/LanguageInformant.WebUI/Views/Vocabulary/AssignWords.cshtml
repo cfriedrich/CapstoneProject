@@ -31,7 +31,7 @@
                 <input type="submit" name="add" id="add" value=">>" />
             </td>
             <td align="center">
-                @Html.ActionLink("Delete Word", "DeleteWords", "Vocabulary", Model.VocabularyID)
+                @Html.ActionLink("Delete Words", "DeleteWords", new { Model.VocabularyID })
                 @*<input type="submit" name="remove" id="remove" value="<<" />*@
             </td>
         </tr>

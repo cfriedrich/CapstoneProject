@@ -83,7 +83,7 @@ namespace LanguageInformant.Domain.Concrete
             var db = new LanguageInformantDbContext();
             Word word = db.Words.Find(wordID);
             Vocabulary vocabulary = db.Vocabularies.Find(vocabularyID);
-            vocabulary.Words.Add(word);
+            vocabulary.Words.Remove(word);
             db.SaveChanges();
         }
 

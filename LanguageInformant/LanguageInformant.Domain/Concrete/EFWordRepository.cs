@@ -42,6 +42,7 @@ namespace LanguageInformant.Domain.Concrete
                     dbEntry.Sound = word.Sound;
                     dbEntry.Meanings = word.Meanings;
                     dbEntry.Language = word.Language;
+                    dbEntry.ContentType = word.ContentType;
                     dbEntry.SoundVol = word.SoundVol;
                     db.SaveChanges();
                 }

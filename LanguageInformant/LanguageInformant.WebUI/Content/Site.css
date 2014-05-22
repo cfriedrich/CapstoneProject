@@ -23,16 +23,16 @@
     border: 2px solid gray;
 }
 
-.button {
+/*.button {
     height: 40px;
     text-align: center;
-    background-color: dimgray;
+    background-color: gray;
     display: grid;
     width: 150px;
-}
+}*/
 
 
-/*div#NavIndex A {
+div#NavIndex A {
     font-family: 'Segoe UI';
     display: block;
     padding: .6em;
@@ -51,7 +51,7 @@
 
     div#NavIndex A.selected:hover {
         background-color: gray;
-    }*/
+    }
 
 table#Menu {
 }
@@ -60,8 +60,11 @@ table#Menu {
     height: 40px;
     text-align: center;
     background-color: dimgray;
-    display:grid;
 }
+
+    #NavItem ul {
+        list-style: none;
+    }
 
 #NavItem td:hover {
         background-color: silver;
@@ -166,4 +169,84 @@ table#Menu {
     width: 200px;
     height: 200px;
     margin: 30px;
+}
+
+#VocabularyWords {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#WordList {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#userCourseBox {
+    font-size: small;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+#breadcrumbNav {
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.button {
+     
+    /*Step 2: Basic Button Styles*/
+    display: block;
+    height: 30px;
+    width: 120px;
+    background: lightgray;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+    align-self: center;
+     
+    /*Step 3: Text Styles*/
+    color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+    text-decoration: none;
+    font: small "Segoe UI";
+    align-content: center;
+     
+    /*Step 4: Fancy CSS3 Styles*/
+    /*background: -webkit-linear-gradient(top, #34696f, #2f5f63);
+    background: -moz-linear-gradient(top, #34696f, #2f5f63);
+    background: -o-linear-gradient(top, #34696f, #2f5f63);
+    background: -ms-linear-gradient(top, #34696f, #2f5f63);
+    background: linear-gradient(top, #34696f, #2f5f63);*/
+     
+    /*-webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;*/
+     
+    /*-webkit-box-shadow: 0 8px 0 #1b383b;
+    -moz-box-shadow: 0 8px 0 #1b383b;
+    box-shadow: 0 8px 0 #1b383b;
+     
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);*/
+     
+}
+ 
+/*Step 3: Link Styles*/
+a.button2 {
+    text-decoration: none;
+}
+ 
+/*Step 5: Hover Styles*/
+
+a.button {
+    text-decoration: none;
+}
+
+a.button:hover {
+    background: #3d7a80;
+    /*background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -o-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -ms-linear-gradient(top, #3d7a80, #2f5f63);
+    background: linear-gradient(top, #3d7a80, #2f5f63);*/
 }

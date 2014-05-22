@@ -54,6 +54,9 @@
     <Reference Include="MvcSiteMapProvider">
       <HintPath>..\packages\MvcSiteMapProvider.MVC5.Core.4.6.3\lib\net45\MvcSiteMapProvider.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\packages\NAudio.1.7.1\lib\net35\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
@@ -189,6 +192,10 @@
     <Compile Include="Migrations\201405200144451_New.Designer.cs">
       <DependentUpon>201405200144451_New.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405210434382_SoundWork.cs" />
+    <Compile Include="Migrations\201405210434382_SoundWork.Designer.cs">
+      <DependentUpon>201405210434382_SoundWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -300,8 +307,9 @@
     <Content Include="Views\Vocabulary\Edit.cshtml" />
     <Content Include="Views\Vocabulary\Delete.cshtml" />
     <Content Include="Views\Vocabulary\Details.cshtml" />
-    <Content Include="Views\Vocabulary\EditWords.cshtml" />
+    <Content Include="Views\Vocabulary\AssignWords.cshtml" />
     <Content Include="Views\Vocabulary\DeleteWords.cshtml" />
+    <Content Include="Views\Word\EditWord.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +331,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201405200144451_New.resx">
       <DependentUpon>201405200144451_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405210434382_SoundWork.resx">
+      <DependentUpon>201405210434382_SoundWork.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

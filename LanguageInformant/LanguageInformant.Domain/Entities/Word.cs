@@ -12,6 +12,7 @@ namespace LanguageInformant.Domain.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public byte[] Sound { get; set; }
+        public string ContentType { get; set; }
         public int SoundVol { get; set; }
         public virtual Language Language { get; set; }
 
