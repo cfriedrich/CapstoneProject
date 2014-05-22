@@ -26,13 +26,16 @@
     <div id="headingBanner" style="width:765px; height:100px; border:dotted medium; float:left;">
         <img src="~/Content/Images/bannerfans_11101131.jpg" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />
     </div>
-    <div id="logoBox" style="width:150px; height:130px; margin-left:10px; border:dotted medium; float:left;">
+    <div id="logoBox" style="width:150px; height:100px; margin-left:10px; border:dotted medium; float:left;">
         <img src="~/Content/Images/Logo.png" alt="LanguageInformantLogo" style="width:inherit; height:inherit;" />
     </div>
     </div>
+<<<<<<< HEAD
     <div id="breadcrumbNav" style="width:600px; height:30px; margin-top:10px; margin-left:165px; border:dotted medium;">
         <p>@Html.MvcSiteMap().SiteMapPath()</p>
     </div>
+=======
+>>>>>>> 7f3a54345eedeb8460c998c91ba5676fdab5f04b
     <div id="userCourseBox" style="width:150px; height:400px; margin-top:50px; border:dotted medium; float:left;">
 
         
@@ -51,7 +54,8 @@
             </ul>
     </div>
 
-    <div id="contentBox" style="width:750px; height:500px; margin-top:5px; margin-left:10px; border:dashed medium; float:left;">
+    <div id="contentBox" style="width:745px; height:500px; margin-top:5px; margin-left:10px; border:dashed medium; float:left; padding:10px;">
+        @Html.MvcSiteMap().SiteMapPath()
         @RenderBody()
     </div>
     
