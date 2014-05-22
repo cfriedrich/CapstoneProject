@@ -10,7 +10,9 @@
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
-    @Html.ValidationSummary()
+    <div id="formSummary" style="float:right; margin-right:100px;">
+        @Html.ValidationSummary()
+    </div>
 <div id="formwrapper" style="width:45%;">
     <div id="formPart1" style="float:left; margin-left:10px;">
         <div class="form-group">
@@ -51,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div id="formPart3"  style="float:left; margin-left:10px;">
+    <div id="formPart3"  style=" height:290px; float:left; margin-left:10px;">
         <div class="form-group">
             @Html.LabelFor(m => m.StreetAddress, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
@@ -84,11 +86,14 @@
             </div>
         </div>
     </div>
-    
-    <input type="submit" class="btn btn-default" value="Register" style="margin-top:20px; margin-left:10px;" />
- 
-</div> 
+    <div id="registerbtn" style="float:left; margin-left:10px;">
+        <input type="submit" class="btn btn-default" value="Register"/>
+    </div>
+</div>
+
+
 }
+
 
 @section Scripts 
 {
