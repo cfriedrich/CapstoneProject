@@ -15,6 +15,11 @@
     width: 750px;
 }
 
+.player {
+    width: 95px;
+    height: 45px;
+}
+
 #Main {
     border: 2px solid gray;
 }

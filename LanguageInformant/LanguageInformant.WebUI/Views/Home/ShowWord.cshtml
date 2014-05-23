@@ -7,8 +7,9 @@
 }
 <h2 style="margin-left:25px;">@Model.Name</h2>
 <div id="wrapper" style="width:100%; padding:10px;">
-    <div id="audioBox" style="border:dashed medium; width:100px; height:100px; float:right; margin-right:25px; padding:5px;">
-        <p>audio goes here</p>
+    <div id="audioBox" style="border:dashed medium; width:100px; height:50px; float:right; margin-right:25px; padding:5px;">
+        <audio class="player" controls src="@Url.Action("GetSound", "Word", new { Model.WordID })" />
+        
     </div>
     <div id="container1" style="border:dashed medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
         
@@ -28,22 +29,20 @@
         }
     </div>
     <div id="container2" style="border:dashed medium; width:250px; height:250px; float:left; margin-left:5px; padding:10px; ">
-            {
-            <p>
-                @Model.Meanings.First().Name
-            </p>
                 <p>
-                    <img width="225" height="225" src="@Url.Action("GetPicture", "Meaning", new { @Model.Meanings.First().MeaningID })" />
+                    <img width="240" height="240" src="@Url.Action("GetPicture", "Meaning", new { @Model.Meanings.First().MeaningID })" />
                 </p>
-            }
     </div>
     <div id="synonymBox" style="border:dashed medium; width:250px; height:105px; float:left; margin-left:5px; margin-top:5px; padding:10px; "> 
         <h3>Synonyms</h3>
         @foreach (Meaning meaning in @Model.Meanings)
         {
+            if (meaning != @Model.Meanings.First())
+            {
             foreach (Word word in meaning.Words)
             {
-                <p>@Html.ActionLink(@word.Name, "ShowWord", "Home", @word.Name)</p>
+                <p>@Html.ActionLink(word.Name, "ShowWord", "Home", word.Name)</p>
+            }
             }
         }
     </div>

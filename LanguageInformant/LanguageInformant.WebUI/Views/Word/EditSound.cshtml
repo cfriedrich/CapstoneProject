@@ -1,0 +1,15 @@
+﻿@model LanguageInformant.Domain.Entities.Word
+
+@{
+    ViewBag.Title = "EditSound";
+}
+
+<h2>EditSound</h2>
+
+@using (Html.BeginForm("EditSound", "Word", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(model => model.WordID)
+    
+    <input type="file" name="FileUpload1" /><br />
+    <input type="submit" name="Submit" id="Submit" value="Upload" />
+}
