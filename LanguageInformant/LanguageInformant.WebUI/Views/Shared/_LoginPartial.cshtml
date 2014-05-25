@@ -4,7 +4,8 @@
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
-
+    
+    
     <p>
        
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
@@ -17,12 +18,12 @@ else
 {
     <table>
         <tr>
-            <td class="button">
+            <td class="loginButton">
                 @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
             </td>
         </tr>
         <tr>
-            <td class="button">
+            <td class="loginButton">
                 @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
             </td>
         </tr>

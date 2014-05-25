@@ -1,19 +1,92 @@
 ﻿body {
     font-family: 'Segoe UI';
+    background-color: lightslategray;
+}
+
+#wrapper {
+    width: 910px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#headingContainer {
+    width: 100%;
+}
+
+#headingBanner {
+    float: left;
+    height: 100px;
+}
+
+#logoBox {
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+#breadcrumbNav {
+    padding-left: 10px;
+    width: 910px;
+    font-size: large;
+    background-color: lightgray;
+    display:table-cell;
+    vertical-align:middle;
+    height: 20px;
+}
+
+#mainContent {
+    background-color: slategray;
+    width: inherit;
+    height: inherit;
+}
+#contentBox {
+    float: right;
+    width: 730px;
+    min-height: 400px;
+    padding: 10px;
+}
+
+#userCourseBox {
+    float: left;
+    width: 140px;
+    font-size: small;
+    background-color: lightgray;
+    padding: 10px;
+    min-height: 500px;
+}
+#footer {
+    float: left;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.loginButton {
+    height: 30px;
+    width: 150px;
+    background: lightgray;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+}
+
+    .loginButton a {
+    text-decoration: none;
+    font-size: medium;
+    text-align: center;
+    }
+
+.pad {
+    font-size: 16px;
+    text-align: center;
+}
+
+.back {
+    font-size: 16px;
+    text-align: center;
 }
 
 #Layout {
     border: none;
 }
 
-#Header {
-    border: 2px solid gray;
-    background-color: black;
-    color: white;
-    font-size: 68px;
-    height: 100px;
-    width: 750px;
-}
 
 .player {
     width: 95px;
@@ -188,12 +261,6 @@ table#Menu {
     margin: 30px;
 }
 
-#userCourseBox {
-    font-size: small;
-    background-color: lightgray;
-    padding: 10px;
-}
-
 #breadcrumbNav {
     padding-bottom: 20px;
     align-items: center;
@@ -204,7 +271,7 @@ table#Menu {
     /*Step 2: Basic Button Styles*/
     display: block;
     height: 30px;
-    width: 120px;
+    text-decoration: none;
     background: lightgray;
     border: 2px solid rgba(33, 68, 72, 0.59);
     align-self: center;
@@ -243,7 +310,7 @@ a.button2 {
  
 /*Step 5: Hover Styles*/
 
-a.button {
+.button a {
     text-decoration: none;
 }
 
