@@ -15,10 +15,40 @@
       <mvcSiteMapNode title="Manage" controller="Account" action="Account"/>
     </mvcSiteMapNode>
     <mvcSiteMapNode title="Admin Portal" controller="Admin" action="Index">
-      <mvcSiteMapNode title="Word Management" controller="Word" action="Index"/>
-      <mvcSiteMapNode title="Meaning Management" controller="Meaning" action="Index"/>
-      <mvcSiteMapNode title="Lesson Management" controller="Lesson" action="Index" />
+      <mvcSiteMapNode title="Word Management" controller="Word" action="Index">
+        <mvcSiteMapNode title="Word List" controller="Word" action="List" >
+          <mvcSiteMapNode title="Edit Word" controller="Word" action="Edit" />
+          <mvcSiteMapNode title="Word Details" controller="Word" action ="Details" />
+          <mvcSiteMapNode title="Create Word" controller="Word" action ="Create" />
+          <mvcSiteMapNode title="Delete Word" controller="Word" action="Delete" />
+          <mvcSiteMapNode title="Edit Meanings" controller="Word" action="EditMeanings" />
+          <mvcSiteMapNode title="Delete Meanings" controller="Word" action="DeleteMeanings" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title ="Vocabulary Management" controller="Vocabulary" action="Index">
+        <mvcSiteMapNode title="Vocabulary List" controller="Vocabulary" action="List">
+          <mvcSiteMapNode title="Edit Vocabulary" controller="Vocabulary" action="Edit" />
+          <mvcSiteMapNode title="Vocabulary Details" controller="Vocabulary" action="Details" />
+          <mvcSiteMapNode title="Create Vocabulary" controller="Vocabulary" action="Create" />
+          <mvcSiteMapNode title="Delete Vocabulary" controller="Vocabulary" action="Delete" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title ="Lesson Management" controller="Lesson" action ="Index">
+        <mvcSiteMapNode title="Lesson List" controller="Lesson" action="List">
+          <mvcSiteMapNode title="Edit Lesson" controller="Lesson" action="Edit"/>
+          <mvcSiteMapNode title="Lesson Details" controller="Lesson" action ="Details"/>
+          <mvcSiteMapNode title="Create Lesson" controller="Lesson" action ="Create"/>
+          <mvcSiteMapNode title="Delete Lesson" controller="Lesson" action ="Delete"/>
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Meaning Management" controller="Meaning" action="Index">
+        <mvcSiteMapNode title="Meaning List" controller="Meaning" action="List">
+          <mvcSiteMapNode title="Edit Meaning" controller="Meaning" action="Edit" />
+          <mvcSiteMapNode title="Meaning Details" controller="Meaning" action="Details" />
+          <mvcSiteMapNode title="Create Meaning" controller="Meaning" action="Create" />
+          <mvcSiteMapNode title="Delete Meaning" controller="Meaning" action="Delete" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
     </mvcSiteMapNode>
-  </mvcSiteMapNode>
-
+    </mvcSiteMapNode>
 </mvcSiteMap>

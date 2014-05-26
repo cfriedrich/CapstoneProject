@@ -4,42 +4,62 @@
 @{
     ViewBag.Title = "List";
 }
-
-<h2>List</h2>
+<h2>Vocabulary List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
+    <tr class="alternate">
+        <th width="20%">
+            Vocabulary Name
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
+        <th width="40%">
+            Lesson
         </th>
-        <th></th>
+        <th colspan="5">
+            <div class="mgmtButton">
+                @Html.ActionLink("Create Vocabulary", "Create")
+            </div>
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
+    @foreach (var item in Model)
+    {
+        <tr class="details">
+            <td class="alternate">
+                @item.Name
+            </td>
+            <td>
+                @item.Lesson
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Edit", "Edit", new { item.VocabularyID })
+                </div>
+            </td>
 
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { item.VocabularyID }) |
-            @Html.ActionLink("Details", "Details", new { item.VocabularyID }) |
-            @Html.ActionLink("Delete", "Delete", new { item.VocabularyID }) |
-            @Html.ActionLink("Assign Words", "AssignWords", new { item.VocabularyID}) |
-            @Html.ActionLink("Delete Words", "DeleteWords", new { item.VocabularyID})
-        </td>
-    </tr>
-}
-
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Details", "Details", new { item.VocabularyID })
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Delete", "Delete", new { item.VocabularyID })
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Assign Words", "AssignWords", new { item.VocabularyID})
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Delete Words", "DeleteWords", new { item.VocabularyID})
+                </div>
+            </td>
+        </tr>
+    }
 </table>

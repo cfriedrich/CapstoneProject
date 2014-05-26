@@ -4,39 +4,42 @@
     ViewBag.Title = "Meaning Details";
 }
 
-<h2>MeaningDetails</h2>
+<h2>Meaning Details</h2>
 
 <div>
-    <h4>Meaning</h4>
 	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+        <h4>
+            Name: 
+        </h4>
+            
+        @Html.DisplayFor(model => model.Name)
+        
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+        <h4>
+            Defintion: 
+        </h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
+        
             @Html.DisplayFor(model => model.Description)
-        </dd>
+        
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture)
-        </dt>
+        <h4>
+            Picture: 
+        </h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.Picture)
-        </dd>
-
-    </dl>
+                @if (Model.ImageData == null)
+                {
+                    @:None
+                }
+                else
+                {
+                    <img width="100" height="100" src="@Url.Action("GetPicture", "Meaning", new { Model.MeaningID })" />
+                }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { Model.MeaningID }) |
+
+    <div class="mgmtButton">
+    @Html.ActionLink("Edit", "Edit", new { Model.MeaningID })
+    </div>
+    <div class="mgmtButton">
     @Html.ActionLink("Back to List", "List")
-</p>
+    </div>

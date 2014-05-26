@@ -4,44 +4,28 @@
     ViewBag.Title = "DeleteMeaning";
 }
 
-<h2>DeleteMeaning</h2>
+<h2>Delete Meaning</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Meaning</h4>
+    <h4>Meaning Name: @Model.Name</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Picture)
-        </dd>
-
-    </dl>
+    <h4>Meaning Defintion: @Model.Description</h4>
+    
+    @if (Model.ImageData == null)
+    {
+        @:None
+    }
+    else
+    {
+        <h4>Meaning Image: </h4><img width="100" height="100" src="@Url.Action("GetPicture", "Meaning", new { Model.MeaningID })" />
+    }
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="mgmtButton" /> |
             @Html.ActionLink("Back to List", "List")
         </div>
     }

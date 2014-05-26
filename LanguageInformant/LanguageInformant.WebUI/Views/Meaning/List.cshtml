@@ -1,30 +1,32 @@
 ﻿@model IEnumerable<LanguageInformant.Domain.Entities.Meaning>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Meaning List";
 }
 
-<h2>List</h2>
+<h2>Meaning List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
-        <th>
+    <tr class="alternate">
+        <th width="20%">
             Meaning Name
         </th>
-        <th>
+        <th width="40%">
             Definition
         </th>
-        <th>
+        <th width="20%">
             Picture
+        </th>
+        <th colspan="3">
+        <div class="mgmtButton">
+            @Html.ActionLink("Create New", "Create")
+        </div>
         </th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    <tr class="details">
+        <td class="alternate">
             @item.Name
         </td>
         <td>
@@ -37,13 +39,24 @@
             }
             else
             {
-            <img width="75" height="75" src="@Url.Action("GetPicture", "Meaning", new { item.MeaningID })" />
+            <img width="50" height="50" src="@Url.Action("GetPicture", "Meaning", new { item.MeaningID })" />
             }
                 </td>
         <td>
-            @Html.ActionLink("Edit", "EditMeaning", new { item.MeaningID }) |
-            @Html.ActionLink("Details", "Details", new { item.MeaningID }) |
+            <div class="mgmtButton">
+            @Html.ActionLink("Edit", "Edit", new { item.MeaningID })
+            </div>
+        </td>
+            
+        <td>
+            <div class="mgmtButton">
+            @Html.ActionLink("Details", "Details", new { item.MeaningID })
+            </div>
+        </td>
+        <td>
+            <div class="mgmtButton">
             @Html.ActionLink("Delete", "Delete", new { item.MeaningID })
+            </div>
         </td>
     </tr>
 }

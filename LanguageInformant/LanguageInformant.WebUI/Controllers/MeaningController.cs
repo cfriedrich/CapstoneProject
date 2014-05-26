@@ -41,14 +41,14 @@ namespace LanguageInformant.WebUI.Controllers
             return View();
         }
 
-        public ViewResult EditMeaning(int meaningId)
+        public ViewResult Edit(int meaningId)
         {
             Meaning thisMeaning = repository.GetMeaning(meaningId);
             return View(thisMeaning);
         }
 
         [HttpPost]
-        public ActionResult EditMeaning(Meaning meaning, HttpPostedFileBase image)
+        public ActionResult Edit(Meaning meaning, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {

@@ -1,52 +1,48 @@
 ﻿@model LanguageInformant.Domain.Entities.Meaning
 
 @{
-    ViewBag.Title = "EditMeaning";
+    ViewBag.Title = "Edit Meaning";
 }
 
-<h2>EditMeaning</h2>
+<h2>Edit Meaning</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Meaning</h4>
-        <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.MeaningID)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <div class="edit">
+            <h4>Meaning Name: </h4>
                 @Html.EditorFor(model => model.Name)
                 @Html.ValidationMessageFor(model => model.Name)
-            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description)
-                @Html.ValidationMessageFor(model => model.Description)
-            </div>
-        </div>
+        <div class="editMultiline">
+                <h4>Definition: </h4>
+            @Html.EditorFor(model => model.Description)    
+            @Html.ValidationMessageFor(model => model.Description)
+         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Picture, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Picture)
-                @Html.ValidationMessageFor(model => model.Picture)
+        <div class="edit">
+            <h4>Image: </h4>
+            <div class="editor-field">
+                @if (Model.ImageData == null)
+                {
+                    @:None
+                }
+                else
+                {
+                    <img width="100" height="100" src="@Url.Action("GetPicture", "Meaning", new { Model.MeaningID })" />
+                }
+                <div>Upload new image: <input type="file" name="image" class="mgmtButton"/></div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
             </div>
-        </div>
     </div>
-}
+                <input type="submit" value="Save" class="mgmtButton" />
+            }
 
 <div>
     @Html.ActionLink("Back to List", "List")
