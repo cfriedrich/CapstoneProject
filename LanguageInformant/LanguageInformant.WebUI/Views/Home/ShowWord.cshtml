@@ -7,11 +7,11 @@
 }
 <h2 style="margin-left:25px;">@Model.Name</h2>
 <div id="wrapper" style="width:100%; padding:10px;">
-    <div id="audioBox" style="border:dashed medium; width:100px; height:50px; float:right; margin-right:25px; padding:5px;">
+    <div id="audioBox" style="width:100px; height:50px; float:right; margin-right:25px; padding:5px;">
         <audio class="player" controls src="@Url.Action("GetSound", "Word", new { Model.WordID })" />
         
     </div>
-    <div id="container1" style="border:dashed medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
+    <div id="container1" style="border:double medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
         
         <p>Word language: @Model.Language.Name</p>
 
@@ -20,20 +20,14 @@
             
         <p>English Translation: @m.Name</p>
         <p>@m.Description</p>    
-
-        @*<p>Show the word from previous textbox. Redisplay based on Language <br />
-           Display drop down box for language choice <br />
-           Definition: 
-
-        </p>*@
         }
     </div>
-    <div id="container2" style="border:dashed medium; width:250px; height:250px; float:left; margin-left:5px; padding:10px; ">
-                <p>
-                    <img width="240" height="240" src="@Url.Action("GetPicture", "Meaning", new { @Model.Meanings.First().MeaningID })" />
-                </p>
+    <div id="container2" style="border: double medium; width:250px; height:250px; float:left; margin-left:5px; padding:10px; ">
+        <p>
+            <img width="240" height="240" src="@Url.Action("GetPicture", "Meaning", new { @Model.Meanings.First().MeaningID })" />
+        </p>
     </div>
-    <div id="synonymBox" style="border:dashed medium; width:250px; height:105px; float:left; margin-left:5px; margin-top:5px; padding:10px; "> 
+    <div id="synonymBox" style="border:double medium; width:250px; height:105px; float:left; margin-left:5px; margin-top:5px; padding:10px; "> 
         <h3>Synonyms</h3>
         @foreach (Meaning meaning in @Model.Meanings)
         {

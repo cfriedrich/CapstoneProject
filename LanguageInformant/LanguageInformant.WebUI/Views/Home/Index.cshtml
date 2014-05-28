@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "The Language Informant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div id="wrapper" style="width:100%; padding:10px;">
@@ -14,19 +15,15 @@
 <div id="content" style="width:100%;">
 <div id="panelRow1" style="width:375px; margin-left:110px;">
     <div class="hover panel" style="float:left;">
-        @*<div class="front" style="border:dotted medium; background-color:crimson;">*@
-        <div class="front">
+        <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
-                <p>Log In to the site here</p>
+                <p>Learn more about us</p>
                 <p>Access Admin Portal (Temp)</p>
             </div>
         </div>
-        @*<div class="back" style="border:dotted medium; background-color:ButtonShadow;">*@
-        <div class="back">
+        <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
-                @Html.ActionLink("Log In with existing account", "LogIn", "Account")
-                <br />
-                @Html.ActionLink("Create a new account", "Register", "Account")
+                @Html.ActionLink("About Us", "About", "Home")
                 <br />
                 @Html.ActionLink("Admin Portal", "Index", "Admin")
             </div>
@@ -34,12 +31,12 @@
     </div>
     
     <div class="hover panel" style="float:left; margin-left:20px;">
-        <div class="front">
+        <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
                 <p>Check out our Dictionary here</p>
             </div>
         </div>
-        <div class="back">
+        <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
                 @Html.ActionLink("Dictionary Link", "Dictionary", "Home")
             </div>
@@ -48,27 +45,27 @@
 </div>
 <div id="panelRow2" style="width:375px; margin-left: 110px; " >
     <div class="hover panel" style="float:left; margin-top:15px;">
-        <div class="front">
+        <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
                 <p>Lessons can be found here</p>
             </div>
         </div>
-        <div class="back">
+        <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
-                @Html.ActionLink("Lesson Link", "Index", "Lesson")
                 @Html.ActionLink("Course Page", "Course", "Home")
             </div>
         </div>
     </div>
     <div class="hover panel" style="float:left; margin-left:20px; margin-top:15px;">
-        <div class="front">
+        <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
-                <p>Contact Info will be hanging out here</p>
+                <p>Contact Us</p>
             </div>
         </div>
-        <div class="back">
+        <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
                 @Html.ActionLink("Need to Contact Us?", "Contact", "Home")
+                <br />
                 @Html.ActionLink("Send us some feedback", "Contact", "Home")
             </div>
         </div>

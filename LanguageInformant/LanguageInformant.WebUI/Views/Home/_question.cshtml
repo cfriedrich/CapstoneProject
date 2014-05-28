@@ -1,0 +1,18 @@
+﻿@model LanguageInformant.WebUI.Models.VocabQuestions
+
+<div class="question" style="border:medium inset; float:left; margin-left:20px; padding:10px;">
+
+@Html.Hidden("VocabQuiz.Questions[" + @Model.OrderNumber +"].Id",@Model.Id)
+
+Points: @Model.Point
+<br />
+Word : @Model.Text 
+<br />
+
+@foreach (var answer in Model.Choices)
+   { 
+    @Html.Partial("_answer",answer); <br />  
+   }
+   
+</div>
+   

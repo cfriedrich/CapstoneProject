@@ -16,6 +16,7 @@ namespace LanguageInformant.WebUI.Controllers
 
         private IWordRepository repository = new EFWordRepository();
         LanguageInformantDbContext db = new LanguageInformantDbContext();
+        private ComprehensionViewModel _compLesson;
 
         public ActionResult Index()
         {
@@ -31,28 +32,56 @@ namespace LanguageInformant.WebUI.Controllers
         public ViewResult Dictionary(string Name)
         {
             Word word = repository.GetWord(Name);
-
-            return View("ShowWord", word);
-        }
-
-        public ViewResult ShowWord(Word word)
-        {
-            /*
-            Word newWord = wordRepo.GetWord(word);
-            if (newWord == null)
+            if (word == null)
             {
                 ViewBag.wordError = "That word does not exist in our database! Please check back later.";
                 return View("Dictionary");
             }
             else
-             */
-            
+                return View("ShowWord", word);
+        }
+
+        public ViewResult ShowWord(Word word)
+        {
             return View();
         }
 
         public ViewResult Course()
         {
             return View();
+        }
+
+        public ViewResult Comprehension()
+        {
+            _compLesson = new ComprehensionViewModel();
+            var quiz = _compLesson.GetQuiz();
+            return View(quiz);
+        }
+
+        [HttpPost]
+        public ViewResult Comprehension(VocabQuiz quiz)
+        {
+            //quiz = _compLesson.GetQuiz();
+            return View("Grade",quiz);
+        }
+
+        public PartialViewResult _question()
+        {
+            var quiz = _compLesson.GetQuiz();
+            return PartialView(quiz);
+        }
+
+        public PartialViewResult _answer()
+        {
+
+            return PartialView();
+        }
+
+       
+        public ViewResult Grade(VocabQuiz quiz)
+        {
+            var grade = _compLesson.Grade(quiz);
+            return View("Grade", grade);
         }
 
         public ActionResult About()

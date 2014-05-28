@@ -6,24 +6,25 @@
 }
 <h2 style="margin-left:25px;">@ViewBag.Title</h2>
 <div id="wrapper" style="width:100%; padding:10px;">
-    <div id="container1" style="border:dashed medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
+    <div id="container1" style="border:double medium; width:250px; height:400px; float:left; margin-left:5px; padding:5px;">
         @using (Html.BeginForm())
         {
             <p>Please enter the word that you would like to search for.</p>
             <p>@Html.TextBoxFor(w=> w.Name )</p>
             
             <input type="submit" value="Show me the meaning" />
-            <p>@ViewBag.errorWord</p>
+            <p style="color:red;">@ViewBag.WordError</p>
         }
 
     </div>
-    <div id="container2" style="border:dashed medium; width:250px; height:390px; float:left; margin-left:5px; padding:10px; ">
+    <div id="container2" style="border:double medium; width:250px; height:390px; float:left; margin-left:5px; padding:10px; ">
         <p>This is a place for the curious to come and find the meaning of words along with some other
            useful information. Such as an image associated to the word and an audio playback to help learn
            more about words in different languages.  
         </p>
     </div>
-    <div id="container3" style="border:dashed medium; width:150px; height:400px; float:left; margin-left:5px; padding:5px;">
+    <div id="container3" style="border:double medium; width:150px; height:400px; float:left; margin-left:5px; padding:5px;">
+        <p><u>List of words previously searched</u></p>
         <p>Log in to access a listing of words you have already looked up.</p>
         
     </div>

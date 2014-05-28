@@ -21,34 +21,20 @@
     </script>
 
 </head>
-@*<body style="background-color:ThreeDDarkShadow; width:1000px;">*@
 <body>
     <div id="wrapper">
-    @*<div id="headingContainer" style="width:100%; height:100px;">*@
     <div id="headingContainer">
-    @*<div id="headingBanner" style="width:765px; height:100px; border:dotted medium; float:left;">*@
         <div id="headingBanner">
-        <img src="~/Content/Images/bannerfans_11101131.jpg" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />
+            <img src="~/Content/Images/bannerfans_11101131.jpg" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />
         </div>
-    
-        @*<div id="logoBox" style="width:150px; height:100px; margin-left:10px; border:dotted medium; float:left;">*@
         <div id="logoBox">
-        <img src="~/Content/Images/Logo.png" alt="LanguageInformantLogo" style="width:inherit; height:inherit;" />
-    </div>
-    </div>
-        <div id="breadcrumbNav">
-            @Html.MvcSiteMap().SiteMapPath()
+            <img src="~/Content/Images/Logo.png" alt="LanguageInformantLogo" style="width:inherit; height:inherit;" />
         </div>
-    @*<div id="breadcrumbNav" style="width:600px; height:30px; margin-top:10px; margin-left:165px; border:dotted medium;">
-    </div>*@
-    @*<div id="userCourseBox" style="width:150px; height:400px; margin-top:50px; border:dotted medium; float:left;">*@
-    <div id="mainContent">
-        <div id="userCourseBox">
-
+    </div>
+    <div id="userCourseBox">
             @Html.Partial("_LoginPartial")
             <br />
-                @Html.ActionLink("Help", "About", "Home")
-            <br /><br />
+
             <p>Is this not you? <br />
                click <a href="javascript:document.getElementById('logoutForm').submit()">HERE</a> to log out.
             </p>
@@ -59,13 +45,11 @@
                 <li>Matching</li>
             </ul>
     </div>
-
-    @*<div id="contentBox" style="width:745px; height:500px; margin-top:5px; margin-left:10px; border:dashed medium; float:left; padding:10px;">*@
         <div id="contentBox">
+        @Html.MvcSiteMap().SiteMapPath()
         @RenderBody()
     </div>
     </div>
-    @*<div id="footer" style="width:910px; height:50px; margin-top:10px; margin-left:20px; border:dotted medium; float:left; ">*@
         <div id="footer">
         <p style="text-align:center">&copy The Language Informant Team, 2014</p>
     </div>

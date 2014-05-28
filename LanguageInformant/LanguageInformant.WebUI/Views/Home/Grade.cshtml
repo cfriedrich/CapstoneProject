@@ -1,0 +1,27 @@
+﻿@model LanguageInformant.WebUI.Models.VocabQuiz
+
+@{
+    ViewBag.Title = "Quiz Grade";
+    
+}
+
+<div id="wrapper" style="width:100%; padding:10px;">
+    <div id="container1" style="border:dashed medium; width:95%; height:400px; float:left; margin-left:5px; padding:5px;">
+        <h2>Grade</h2>
+	 
+	    Quiz Name: @Model.Name
+	     
+	    Total Questions: @Model.Questions.Count
+	     
+	    Your Score: @Model.TotalPoints 
+	    
+	    @foreach (var question in Model.Questions)
+	    { 
+	        @Html.Partial("_question", question);
+        } 
+    </div>
+    
+   
+    
+
+</div>

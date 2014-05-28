@@ -5,11 +5,14 @@
 
   <mvcSiteMapNode title="Home" controller="Home" action="Index">
     <mvcSiteMapNode title="About" controller="Home" action="About"/>
-    <mvcSiteMapNode title="Contact" controller ="Home" action="Contact"/>
-    <mvcSiteMapNode title="Course" controller="Home" action="Course"/>
-    <mvcSiteMapNode title="Dictionary" controller="Home" action="Dictionary">
+    <mvcSiteMapNode title="Dictionary" controller="Home" action="Dictionary" >
     <mvcSiteMapNode title="Word Details" controller="Home" action="ShowWord"/>
       </mvcSiteMapNode>
+    <mvcSiteMapNode title="Course" controller="Home" action="Course">
+    <mvcSiteMapNode title="Comprehension" controller="Home" action="Comprehension" />
+    <mvcSiteMapNode title="Grade" controller="Home" action="Grade"/>
+      </mvcSiteMapNode>
+    <mvcSiteMapNode title="Contact" controller ="Home" action="Contact"/>
     <mvcSiteMapNode title="Login" controller="Account" action="Login">
       <mvcSiteMapNode title="Register" controller="Account" action="Register"/>
       <mvcSiteMapNode title="Manage" controller="Account" action="Account"/>

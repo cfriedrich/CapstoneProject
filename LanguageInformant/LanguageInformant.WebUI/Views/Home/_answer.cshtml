@@ -1,0 +1,15 @@
+﻿@model LanguageInformant.WebUI.Models.VocabAnswers
+
+@if (Model.IsSelected && Model.IsAnswer)
+{  
+    <div style="background-color:lightgreen">
+    @Html.RadioButton("VocabQuiz.Questions[" + Model.Question.OrderNumber + "].Choices[0].Id",Model.Id);
+    @Model.Text
+    </div>
+} 
+else 
+{  
+    @Html.RadioButton("VocabQuiz.Questions[" + Model.Question.OrderNumber + "].Choices[0].Id",Model.Id);
+    @Model.Text
+}
+   
