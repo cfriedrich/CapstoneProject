@@ -4,27 +4,59 @@
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
-    
-    
-    <p>
-       
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
-      <br />
-       <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-    </p>
+
+
+    <table>
+        <tr>
+            <td>
+                <p>Hello @User.Identity.GetUserName()!</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="loginButton">
+                @Html.ActionLink("Manage Account", "Manage", "Account", routeValues: null, htmlAttributes: new { id = "Manage" })
+            </td>
+        </tr>
+        <tr>
+           <td>
+               <p>Not you? Ready to leave?<br /><br /> Click the button below to logout</p>
+           </td>
+        </tr>
+        <tr>
+            <td class="loginButton">
+                <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+            </td>
+        </tr>
+    </table>
     }
 }
 else
 {
     <table>
         <tr>
-            <td class="loginButton">
-                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
-            </td>
+        <td>
+            <p>
+            You are not currently logged in<br /><br />
+            Please login for access to activities and lessons
+            </p>
+        </td>
         </tr>
         <tr>
             <td class="loginButton">
                 @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Don't have an account?<br />
+                    Click the button below to register for access
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="loginButton">
+                @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
             </td>
         </tr>
     </table>
