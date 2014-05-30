@@ -1,6 +1,6 @@
 ﻿body {
     font-family: 'Segoe UI';
-    background-color: lightslategray;
+    background-color: lightslategray#708090;
 }
 
 #wrapper {
@@ -57,7 +57,7 @@
 }
 #footer {
     float: left;
-    width: 100%;
+    width: 910px;
     background-color: #E7DED4;
 }
 

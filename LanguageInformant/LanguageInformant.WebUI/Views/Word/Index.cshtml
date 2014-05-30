@@ -4,20 +4,21 @@
     ViewBag.Title = "Index";
 }
 
-<table>
+<h2>Manage Words</h2>
+<table align="center">
     <tr>
-        <td class="button">
+        <td class="navButton">
             @Html.ActionLink("Add Word", "Create")
         </td>
     </tr>
     <tr>
-        <td class="button">
+        <td class="navButton">
             @Html.ActionLink("List Words", "List")
         </td>
     </tr>
     <tr>
-        <td class="button">
-            @Html.ActionLink("Dictionary", "Dictionary")
+        <td class="navButton">
+            @Html.ActionLink("Dictionary", "Dictionary", "Home")
         </td>
     </tr>
 </table>
