@@ -2,16 +2,16 @@
 
 <div class="question" style="border:medium inset; float:left; margin-left:20px; padding:10px;">
 
-@Html.Hidden("VocabQuiz.Questions[" + @Model.OrderNumber +"].Id",@Model.Id)
+@Html.Hidden("Questions[" + Model.OrderNumber +"].Id", Model.Id)
 
 Points: @Model.Point
 <br />
 Word : @Model.Text 
 <br />
 
-@foreach (var answer in Model.Choices)
+@foreach (var choice in Model.Choices)
    { 
-    @Html.Partial("_answer",answer); <br />  
+    @Html.Partial("_answer",choice);   
    }
    
 </div>

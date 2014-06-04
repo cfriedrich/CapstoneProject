@@ -61,8 +61,9 @@ namespace LanguageInformant.WebUI.Controllers
         [HttpPost]
         public ViewResult Comprehension(VocabQuiz quiz)
         {
-            //quiz = _compLesson.GetQuiz();
-            return View("Grade",quiz);
+            _compLesson = new ComprehensionViewModel();
+            var grade = _compLesson.Grade(quiz);
+            return View("Grade", grade);
         }
 
         public PartialViewResult _question()
@@ -73,8 +74,8 @@ namespace LanguageInformant.WebUI.Controllers
 
         public PartialViewResult _answer()
         {
-
-            return PartialView();
+            var quiz = _compLesson.GetQuiz();
+            return PartialView(quiz);
         }
 
        

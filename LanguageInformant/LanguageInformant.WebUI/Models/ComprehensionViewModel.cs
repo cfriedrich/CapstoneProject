@@ -9,30 +9,15 @@ namespace LanguageInformant.WebUI.Models
 {
     public class ComprehensionViewModel
     {
-        Word word = new Word();
-        Meaning meaning = new Meaning();
-        //questions for quiz
-        IQueryable<Word> words;
-        //answers to questions
-        ICollection<Meaning> meanings;
         //user logged in to track progress
         Member member = new Member();
-
-        EFWordRepository wordRepo = new EFWordRepository();
-        EFMeaningRepository meaningRepo = new EFMeaningRepository();
-
-        public IQueryable<Word> GetWords()
-        {
-            words = wordRepo.GetWords();
-            return words;
-        }
 
         public VocabQuiz GetQuiz()
         {
             var quiz = new VocabQuiz() 
             { 
                 Id = 100, 
-                Name = " Vocabulary Comprehension Lesson" 
+                Name = " Vocabulary Translation Lesson" 
             };
             quiz.AddQuestion(GetQuestions());
 
@@ -68,14 +53,14 @@ namespace LanguageInformant.WebUI.Models
                     { 
                         Text="Casa", 
                         Point =5, 
-                        Id=3, 
+                        Id=4, 
                         OrderNumber = 3
                     },
                     new VocabQuestions() 
                     { 
                         Text="Gato", 
                         Point =5, 
-                        Id=3, 
+                        Id=5, 
                         OrderNumber = 4
                     }
                 };
@@ -86,24 +71,24 @@ namespace LanguageInformant.WebUI.Models
             questions[0].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Lamp", Id = 4 });
 
             questions[1].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Lightbulb", Id = 5 });
-            questions[1].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Sun", Id = 5 });
-            questions[1].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Shirt", Id = 6 });
-            questions[1].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Chair", Id = 7 });
+            questions[1].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Sun", Id = 6 });
+            questions[1].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Shirt", Id = 7 });
+            questions[1].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Chair", Id = 8 });
             
-            questions[2].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Table", Id = 8 });
-            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bathroom", Id = 9 });
-            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Cold", Id = 10 });
-            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bright", Id = 11 });
+            questions[2].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Table", Id = 9 });
+            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bathroom", Id = 10 });
+            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Cold", Id = 11 });
+            questions[2].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bright", Id = 12 });
 
-            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Doctor", Id = 12 });
-            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Car", Id = 13 });
-            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Love", Id = 14 });
-            questions[3].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "House", Id = 15 });
+            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Doctor", Id = 13 });
+            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Car", Id = 14 });
+            questions[3].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Love", Id = 15 });
+            questions[3].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "House", Id = 16 });
 
-            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bird", Id = 16 });
-            questions[4].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Cat", Id = 17 });
-            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Hole", Id = 18 });
-            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Hello", Id = 19 });
+            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Bird", Id = 17 });
+            questions[4].AddChoice(new VocabAnswers() { IsAnswer = true, Text = "Cat", Id = 18 });
+            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Hole", Id = 19 });
+            questions[4].AddChoice(new VocabAnswers() { IsAnswer = false, Text = "Hello", Id = 20 });
 
 
             return questions;

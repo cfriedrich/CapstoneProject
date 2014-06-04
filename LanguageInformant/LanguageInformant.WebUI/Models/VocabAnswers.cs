@@ -10,13 +10,13 @@ namespace LanguageInformant.WebUI.Models
         public int Id { get; set; }
         public string Text { get; set; }
         public bool IsAnswer { get; set; }
-        private VocabQuestions _question = new VocabQuestions();
+        private VocabQuestions _questions = new VocabQuestions();
         public bool IsSelected { get; set; }
 
         public VocabQuestions Question
         {
-            get { return _question; }
-            set { _question = value; }
+            get { return _questions; }
+            set { _questions = value; }
         }
     }
 }
