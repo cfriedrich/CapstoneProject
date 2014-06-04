@@ -29,7 +29,7 @@ namespace LanguageInformant.WebUI.Controllers
         }
 
         [HttpPost]
-        public ViewResult Dictionary(string Name)
+        public ActionResult Dictionary(string Name)
         {
             Word word = repository.GetWord(Name);
             if (word == null)
@@ -38,12 +38,13 @@ namespace LanguageInformant.WebUI.Controllers
                 return View("Dictionary");
             }
             else
-                return View("ShowWord", word);
+                return RedirectToAction("ShowWord", new { name = Name });
         }
 
-        public ViewResult ShowWord(Word word)
+        public ActionResult ShowWord(string name)
         {
-            return View();
+            Word word = repository.GetWord(name);
+            return View(word);
         }
 
         public ViewResult Course()
@@ -59,11 +60,12 @@ namespace LanguageInformant.WebUI.Controllers
         }
 
         [HttpPost]
-        public ViewResult Comprehension(VocabQuiz quiz)
+        public ActionResult Comprehension(VocabQuiz Quiz)
         {
             _compLesson = new ComprehensionViewModel();
-            var grade = _compLesson.Grade(quiz);
+            var grade = _compLesson.Grade(Quiz);
             return View("Grade", grade);
+            //return RedirectToAction("Grade", new { quiz = Quiz });
         }
 
         public PartialViewResult _question()
@@ -79,8 +81,9 @@ namespace LanguageInformant.WebUI.Controllers
         }
 
        
-        public ViewResult Grade(VocabQuiz quiz)
+        public ActionResult Grade(VocabQuiz quiz)
         {
+            _compLesson = new ComprehensionViewModel();
             var grade = _compLesson.Grade(quiz);
             return View("Grade", grade);
         }
