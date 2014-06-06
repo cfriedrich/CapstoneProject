@@ -53,7 +53,9 @@
     background-color: #E7DED4;
     padding: 10px;
     min-height: 500px;
+    font-size: smaller;
 }
+
 #footer {
     float: left;
     width: 910px;
@@ -61,8 +63,8 @@
 }
 
 .loginButton {
-    height: 30px;
-    width: 150px;
+    height: 25px;
+    width: 140px;
     text-align: center;
     background: lightgray;
     border: 2px solid rgba(33, 68, 72, 0.59);
@@ -108,7 +110,7 @@
 }
 
 .pad {
-    display: table-cell; 
+    display: block; 
     vertical-align: middle;
     font-size: 16px;
     text-align: center;
@@ -118,18 +120,21 @@
     font-weight: bold; 
     border-radius:8px 8px; 
     border: ridge thick ButtonShadow; 
-    background-color:crimson;
-    
+    background-color:crimson;   
 }
 
 .back {
     border:inset thick crimson; 
     border-radius:8px 8px; 
     background-color:crimson;
-    display: table-cell; 
+    display: block;
     vertical-align: middle;
     font-size: 16px;
     text-align: center;
+}
+
+.padback {
+padding-top: 15px;
 }
 
 .editMultiline {

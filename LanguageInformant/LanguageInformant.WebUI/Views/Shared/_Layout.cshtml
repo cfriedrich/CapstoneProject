@@ -35,7 +35,9 @@
             @Html.Partial("_LoginPartial")
     </div>
         <div id="contentBox">
+            <div id="siteMapPath" style="">
         @Html.MvcSiteMap().SiteMapPath()
+            </div>
         @RenderBody()
     </div>
         <div id="footer">

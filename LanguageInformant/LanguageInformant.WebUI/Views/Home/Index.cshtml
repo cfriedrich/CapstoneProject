@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="wrapper" style="width:100%; padding:10px;">
+<div id="wrapper" style="width:100%;">
 <h1 style="margin-top:5px; margin-bottom:2px;">Welcome to the Language Informant</h1>
 <h2 style="margin-top:0px; margin-bottom:0px;">An exciting way to learn a new language</h2>
 <p style="margin-top:2px; margin-bottom:2px;">This site is still under construction.
@@ -23,9 +23,11 @@
         </div>
         <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
+                <div class="padback"
                 @Html.ActionLink("About Us", "About", "Home")
                 <br />
                 @Html.ActionLink("Admin Portal", "Index", "Admin")
+                </div>
             </div>
         </div>
     </div>
@@ -38,7 +40,9 @@
         </div>
         <div class="back" style="border:inset thick crimson#dc143c; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
+                <div class="padback">
                 @Html.ActionLink("Dictionary Link", "Dictionary", "Home")
+                </div>
             </div>
         </div>
     </div>
@@ -52,7 +56,9 @@
         </div>
         <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
+                <div class="padback">
                 @Html.ActionLink("Course Page", "Course", "Home")
+                </div>
             </div>
         </div>
     </div>
@@ -64,10 +70,12 @@
         </div>
         <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
+                <div class="padback">
                 @Html.ActionLink("Need to Contact Us?", "Contact", "Home")
                 <br />
                 @Html.ActionLink("Send us some feedback", "Contact", "Home")
-            </div>
+                </div>
+                </div>
         </div>
     </div>
 </div>

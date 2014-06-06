@@ -230,6 +230,8 @@
     <None Include="Properties\PublishProfiles\languageinformant %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\languageinformant %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\languageinformant %287%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant.pubxml" />
     <None Include="Properties\PublishProfiles\New.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -244,7 +246,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
