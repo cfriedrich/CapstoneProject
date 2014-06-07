@@ -193,6 +193,10 @@
     <Compile Include="Models\ComprehensionViewModel.cs" />
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MatchingAnswers.cs" />
+    <Compile Include="Models\MatchingImages.cs" />
+    <Compile Include="Models\MatchingQuiz.cs" />
+    <Compile Include="Models\MatchingViewModel.cs" />
     <Compile Include="Models\VocabAnswers.cs" />
     <Compile Include="Models\VocabQuestions.cs" />
     <Compile Include="Models\VocabQuiz.cs" />
@@ -319,6 +323,10 @@
     <Content Include="Views\Home\_question.cshtml" />
     <Content Include="Views\Home\Grade.cshtml" />
     <Content Include="Views\Home\WordListView.cshtml" />
+    <Content Include="Views\Home\_image.cshtml" />
+    <Content Include="Views\Home\_matchinganswer.cshtml" />
+    <Content Include="Views\Home\Matching.cshtml" />
+    <Content Include="Views\Home\MatchingGrade.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

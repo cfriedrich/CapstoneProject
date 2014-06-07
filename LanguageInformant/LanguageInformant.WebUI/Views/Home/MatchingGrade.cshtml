@@ -1,0 +1,32 @@
+﻿@model LanguageInformant.WebUI.Models.Grade
+
+@{
+    ViewBag.Title = "Quiz Grade";
+    
+}
+
+<div id="wrapper" style="width:100%; padding:10px;">
+    <div id="container1" style="border:dashed medium; width:95%; height:400px; float:left; margin-left:5px; padding:5px;">
+        <h2>Grade</h2>
+	    <div style="float:left; width:95%;">
+	    Quiz Name: @Model.MatchingQuiz.Name
+	    <br />
+	    Total Questions: @Model.MatchingQuiz.Images.Count
+	    <br />
+	    Your Score: @Model.Score 
+	    </div>
+        <br />
+	    @foreach (var question in Model.MatchingQuiz.Images)
+	    { 
+	        @Html.Partial("_image", question);
+        } 
+
+        <div style="margin-top:20px; margin-left:10px; float:left;">
+            @Html.ActionLink("Reattempt Quiz", "Matching", "Home")
+        </div>
+    </div>
+    
+   
+    
+
+</div>

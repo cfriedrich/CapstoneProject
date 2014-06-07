@@ -1,0 +1,18 @@
+﻿@model LanguageInformant.WebUI.Models.MatchingImages
+
+<div class="question" style="border:medium inset; float:left; margin-left:20px; margin-top:20px; padding:10px;">
+
+@Html.Hidden("Images[" + Model.OrderNumber +"].Id", Model.Id)
+
+Points: @Model.Point
+<br />
+<img width="120" height="120" src="@Url.Action("GetPicture", "Meaning", new { @Model.Id })" /> 
+<br />
+
+@foreach (var choice in Model.Choices)
+   { 
+    @Html.Partial("_matchinganswer",choice);   
+   }
+   
+</div>
+   

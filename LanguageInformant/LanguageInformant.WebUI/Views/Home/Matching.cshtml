@@ -1,0 +1,28 @@
+﻿@model LanguageInformant.WebUI.Models.MatchingQuiz
+
+@{
+    ViewBag.Title = "Comprehension Lesson";
+    
+}
+
+<div id="wrapper" style="width:100%; padding:10px;">
+    <div id="container1" style="border:double medium; width:95%; height:450px; float:left; margin-left:5px; padding:5px;">
+        <h1> @Model.Name </h1>     
+        <h3>Find the image that coresponds to the word</h3>
+        <h3>The Word: @Model.Word</h3>
+@Html.Hidden("Id", @Model.Id)
+    
+  @using (Html.BeginForm())
+  {  
+    
+    foreach (var question in Model.Images)
+       { 
+         @Html.Partial("_image", question);            
+       }
+    <div style="margin-top:20px; margin-left:50px; float:left; ">
+    <input type="submit" value="Submit your quiz" />
+    </div>
+  } 
+
+    </div>   
+</div>

@@ -10,5 +10,6 @@ namespace LanguageInformant.WebUI.Models
         public double TotalPoints { get; set; }
         public double Score { get; set; }
         public VocabQuiz Quiz { get; set; }
+        public MatchingQuiz MatchingQuiz { get; set; }
     }
 }

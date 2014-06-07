@@ -1,0 +1,16 @@
+﻿@model LanguageInformant.WebUI.Models.MatchingAnswers
+
+@if (Model.IsSelected && Model.IsAnswer)
+{  
+    <div style="margin:0px; background-color:lightgreen">
+    @Html.RadioButton("Images[" + Model.Image.OrderNumber +"].Choices[0].Id",Model.Id)
+    @Model.Text
+    </div>
+} 
+else 
+{  
+    @Html.RadioButton("Images[" + Model.Image.OrderNumber +"].Choices[0].Id",Model.Id)
+    @Model.Text
+    <br />
+}
+   

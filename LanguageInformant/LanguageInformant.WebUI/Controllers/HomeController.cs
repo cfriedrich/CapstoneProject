@@ -17,6 +17,7 @@ namespace LanguageInformant.WebUI.Controllers
         private IWordRepository repository = new EFWordRepository();
         LanguageInformantDbContext db = new LanguageInformantDbContext();
         private ComprehensionViewModel _compLesson;
+        private MatchingViewModel _matchingLesson;
 
         public ActionResult Index()
         {
@@ -123,6 +124,34 @@ namespace LanguageInformant.WebUI.Controllers
             _compLesson = new ComprehensionViewModel();
             var grade = _compLesson.Grade(quiz);
             return View("Grade", grade);
+        }
+
+        public ViewResult Matching()
+        {
+            _matchingLesson = new MatchingViewModel();
+            var quiz = _matchingLesson.GetQuiz();
+            return View(quiz);
+        }
+
+        [HttpPost]
+        public ActionResult Matching(MatchingQuiz Quiz)
+        {
+            _matchingLesson = new MatchingViewModel();
+            var grade = _matchingLesson.Grade(Quiz);
+            return View("MatchingGrade", grade);
+            //return RedirectToAction("Grade", new { quiz = Quiz });
+        }
+
+        public PartialViewResult _image()
+        {
+            var quiz = _matchingLesson.GetQuiz();
+            return PartialView(quiz);
+        }
+
+        public PartialViewResult _matchinganswer()
+        {
+            var quiz = _matchingLesson.GetQuiz();
+            return PartialView(quiz);
         }
 
         public ActionResult About()
