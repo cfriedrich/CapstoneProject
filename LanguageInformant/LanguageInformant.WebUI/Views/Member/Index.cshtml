@@ -1,18 +1,18 @@
 ﻿@model LanguageInformant.Domain.Entities.Member
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Member Index";
 }
-
-<h2>Index</h2>
-
-<div>
-    <h4>Member</h4>
-	<hr />
-    <dl class="dl-horizontal">
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MemberID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<h2>Manage Lessons</h2>
+<table align="center">
+    <tr>
+        <td class="navButton">
+            @Html.ActionLink("Add Member", "Create")
+        </td>
+    </tr>
+    <tr>
+        <td class="navButton">
+            @Html.ActionLink("List Members", "List")
+        </td>
+    </tr>
+</table>

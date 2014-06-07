@@ -1,51 +1,71 @@
 ﻿@model LanguageInformant.Domain.Entities.Word
+@using LanguageInformant.Domain.Entities
 
 @{
-    ViewBag.Title = "WordDetails";
+    ViewBag.Title = "Word Details";
 }
 
-<h2>WordDetails</h2>
-
-<div>
-    <h4>Word</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Sound)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Sound)
-            <audio controls src="@Url.Action("LoadAudio", new { id = Model.WordID } )"/>
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SoundVol)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SoundVol)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { Model.WordID }) |
-    @Html.ActionLink("Back to List", "List")
-</p>
+<h2>Word Details</h2>
+<hr />
+<table>
+    <tr>
+        <td>
+            <h4>Name </h4>
+        </td>
+        <td>
+            @Model.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>Description </h4>
+        </td>
+        <td>
+            @Model.Description
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>Language </h4>
+        </td>
+        <td>
+            @Model.Language.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>Sound </h4>
+        </td>
+        <td>
+            <audio class="player" controls src="@Url.Action("GetSound", new { Model.WordID })" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>Associated Meanings</h4>
+        </td>
+        <td>
+            @foreach(Meaning meaning in Model.Meanings)
+            {
+                <p>@meaning.Name.ToString()</p>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mgmtButton">
+                @Html.ActionLink("Edit", "Edit", new { Model.WordID })
+            </div>
+        </td>
+        <td>
+            <div class="mgmtButton">
+                @Html.ActionLink("Meanings", "EditMeanings", new { Model.WordID })
+            </div>
+        </td>
+        <td>
+            <div class="mgmtButton">
+                @Html.ActionLink("Back to List", "List")
+            </div>
+        </td>
+    </tr>
+</table>

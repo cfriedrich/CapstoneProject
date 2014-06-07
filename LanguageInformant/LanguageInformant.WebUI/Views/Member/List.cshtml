@@ -1,0 +1,30 @@
+﻿@model IEnumerable<LanguageInformant.Domain.Entities.Member>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MemberID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MemberID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MemberID })
+        </td>
+    </tr>
+}
+
+</table>

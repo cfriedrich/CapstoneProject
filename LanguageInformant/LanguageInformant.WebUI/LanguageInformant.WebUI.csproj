@@ -327,6 +327,8 @@
     <Content Include="Views\Home\_matchinganswer.cshtml" />
     <Content Include="Views\Home\Matching.cshtml" />
     <Content Include="Views\Home\MatchingGrade.cshtml" />
+    <Content Include="Views\Member\Create.cshtml" />
+    <Content Include="Views\Member\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

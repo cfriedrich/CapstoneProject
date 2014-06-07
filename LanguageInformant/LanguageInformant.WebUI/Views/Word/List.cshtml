@@ -2,58 +2,115 @@
 @using LanguageInformant.Domain.Entities
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Word List";
 }
 
-<h2>List</h2>
+<h2>Word List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
+    <tr class="alternate">
+        <th width="20%">
+            Word Spelling
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
+        <th width="40%">
+            Description
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Language)
+        <th width="10%">
+            Sound
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sound)
+        <th colspan="4">
+            <div class="mgmtButton">
+                @Html.ActionLink("Create New", "Create")
+            </div>
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoundVol)
-        </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <th>
-        </th>
-        <td>
-            <audio class="player" controls src="@Url.Action("GetSound", new { item.WordID })" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoundVol)
-        </td>
-        <td>
-            @Html.ActionLink("Edit Sound", "EditSound", new {item.WordID}) |
-            @Html.ActionLink("Edit", "Edit", new { item.WordID }) |
-            @Html.ActionLink("Details", "Details", new { item.WordID }) |
-            @Html.ActionLink("Delete", "Delete", new { item.WordID }) |
-            @Html.ActionLink("Edit Meanings", "EditMeanings", new { item.WordID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr class="details">
+            <td class="alternate" style="padding-left:10px;">
+                @item.Name
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                <audio class="player" controls src="@Url.Action("GetSound", new { item.WordID })" />
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Edit", "Edit", new { item.WordID })
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Meanings", "EditMeanings", new { item.WordID})
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Details", "Details", new { item.WordID })
+                </div>
+            </td>
+            <td>
+                <div class="mgmtButton">
+                    @Html.ActionLink("Delete", "Delete", new { item.WordID })
+                </div>
+            </td>
+        </tr>
+    }
 
 </table>
+
+
+    @*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sound)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoundVol)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <th>
+                </th>
+                <td>
+                    <audio class="player" controls src="@Url.Action("GetSound", new { item.WordID })" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoundVol)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit Sound", "EditSound", new { item.WordID }) |
+                    @Html.ActionLink("Edit", "Edit", new { item.WordID }) |
+                    @Html.ActionLink("Details", "Details", new { item.WordID }) |
+                    @Html.ActionLink("Delete", "Delete", new { item.WordID }) |
+                    @Html.ActionLink("Edit Meanings", "EditMeanings", new { item.WordID })
+                </td>
+            </tr>
+        }
+
+    </table>*@

@@ -15,14 +15,26 @@ namespace LanguageInformant.WebUI.Controllers
 
         public ActionResult Index()
         {
-            Lesson testLesson = new Lesson { Name = "TestLesson", Description = "TestLesson" };
-            Member testMember = new Member();
-
-            testMember.Lessons.Add(testLesson);
-
-            return View(testMember);
+            return View();
         }
 
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Create(Member member)
+        {
+            repository.AddMember(member);
+            return View();
+        }
+
+        public ViewResult List()
+        {
+            return View(repository.GetMembers());
+        }
+        
 
 	}
 }

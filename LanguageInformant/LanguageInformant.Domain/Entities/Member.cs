@@ -12,6 +12,8 @@ namespace LanguageInformant.Domain.Entities
     {
         public int MemberID { get; set; }
 
+        [Required]
+        public string Name { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }
