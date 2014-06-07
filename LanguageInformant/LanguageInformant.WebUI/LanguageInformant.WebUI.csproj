@@ -189,15 +189,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
-    <Compile Include="Migrations\201405200144451_New.cs" />
-    <Compile Include="Migrations\201405200144451_New.Designer.cs">
-      <DependentUpon>201405200144451_New.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201405210434382_SoundWork.cs" />
-    <Compile Include="Migrations\201405210434382_SoundWork.Designer.cs">
-      <DependentUpon>201405210434382_SoundWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ComprehensionViewModel.cs" />
     <Compile Include="Models\Grade.cs" />
@@ -327,6 +318,7 @@
     <Content Include="Views\Home\_answer.cshtml" />
     <Content Include="Views\Home\_question.cshtml" />
     <Content Include="Views\Home\Grade.cshtml" />
+    <Content Include="Views\Home\WordListView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -345,14 +337,6 @@
       <Project>{e1f98ae0-36a8-440f-bdf3-5097839b7314}</Project>
       <Name>LanguageInformant.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201405200144451_New.resx">
-      <DependentUpon>201405200144451_New.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201405210434382_SoundWork.resx">
-      <DependentUpon>201405210434382_SoundWork.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

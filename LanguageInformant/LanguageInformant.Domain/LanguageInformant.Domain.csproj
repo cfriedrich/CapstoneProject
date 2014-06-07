@@ -69,21 +69,11 @@
     <Compile Include="Entities\Unit.cs" />
     <Compile Include="Entities\Vocabulary.cs" />
     <Compile Include="Entities\Word.cs" />
-    <Compile Include="Migrations\201405212131210_Sound.cs" />
-    <Compile Include="Migrations\201405212131210_Sound.Designer.cs">
-      <DependentUpon>201405212131210_Sound.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201405212131210_Sound.resx">
-      <DependentUpon>201405212131210_Sound.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

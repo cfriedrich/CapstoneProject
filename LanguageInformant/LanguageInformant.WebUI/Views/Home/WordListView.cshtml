@@ -1,0 +1,10 @@
+﻿@model LanguageInformant.Domain.Entities.Word
+
+@using (Html.BeginForm())
+{
+
+    @Html.ListBox("name")
+
+    <input type="submit" value="Lookup Word" style="padding-top:5px;"/>
+}
+

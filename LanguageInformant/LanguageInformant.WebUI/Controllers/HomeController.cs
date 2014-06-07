@@ -25,12 +25,34 @@ namespace LanguageInformant.WebUI.Controllers
 
         public ViewResult Dictionary()
         {
+            var words = from w in db.Words
+                        select new
+                        {
+                            w.WordID,
+                            w.Name,
+                            w.Description
+                        };
+
+            SelectList name = new SelectList(words.Take(10), "Name", "Name");
+            ViewData["Name"] = new SelectList(words, "Name", "Name");
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Dictionary(string Name)
         {
+            var words = from w in db.Words
+                        select new
+                        {
+                            w.WordID,
+                            w.Name,
+                            w.Description
+                        };
+
+            SelectList name = new SelectList(words.Take(10), "Name", "Name");
+            ViewData["Name"] = new SelectList(words, "Name", "Name");
+
             Word word = repository.GetWord(Name);
             if (word == null)
             {
@@ -79,7 +101,22 @@ namespace LanguageInformant.WebUI.Controllers
             var quiz = _compLesson.GetQuiz();
             return PartialView(quiz);
         }
+        
+        public PartialViewResult WordListView()
+        {
+            var words = from w in db.Words
+                        select new
+                        {
+                            w.WordID,
+                            w.Name,
+                            w.Description
+                        };
 
+            SelectList name = new SelectList(words.Take(10), "Name", "Name");
+            ViewData["Name"] = new SelectList(words, "Name", "Name");
+
+            return PartialView();
+        }
        
         public ActionResult Grade(VocabQuiz quiz)
         {

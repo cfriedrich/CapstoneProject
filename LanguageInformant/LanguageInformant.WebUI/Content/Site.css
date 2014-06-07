@@ -1,6 +1,6 @@
 ﻿body {
     font-family: 'Segoe UI';
-    background-color: lightslategray;
+    background-color: whitesmoke;
 }
 
 #wrapper {
@@ -323,6 +323,11 @@ table#Menu {
     width: 200px;
     height: 200px;
     margin: 30px;
+}
+
+#name {
+    width: 200px;
+    height: 100px;
 }
 
 #VocabularyWords {
