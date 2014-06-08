@@ -35,6 +35,11 @@ namespace LanguageInformant.WebUI.Controllers
             return View(repository.GetMembers());
         }
         
+        public PartialViewResult MemberInfo(string userName)
+        {
+            Member member = repository.GetMember(userName);
+            return PartialView(member);
+        }
 
 	}
 }

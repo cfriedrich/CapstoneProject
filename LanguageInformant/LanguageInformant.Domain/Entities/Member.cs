@@ -15,5 +15,6 @@ namespace LanguageInformant.Domain.Entities
         [Required]
         public string Name { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
+        public virtual ICollection<Word> Words { get; set; }
     }
 }

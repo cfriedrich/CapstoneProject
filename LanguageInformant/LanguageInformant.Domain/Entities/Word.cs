@@ -16,7 +16,7 @@ namespace LanguageInformant.Domain.Entities
         public string ContentType { get; set; }
         public int SoundVol { get; set; }
         public virtual Language Language { get; set; }
-
+        public virtual ICollection<Member> Members { get; set; }
         public virtual ICollection<Meaning> Meanings { get; set; }
     }
 }

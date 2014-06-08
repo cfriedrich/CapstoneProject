@@ -38,6 +38,8 @@ namespace LanguageInformant.Domain.Concrete
                 Member dbEntry = db.Members.Find(Member.MemberID);
                 if (dbEntry != null)
                 {
+                    dbEntry.Name = Member.Name;
+                    dbEntry.Words = Member.Words;
                     dbEntry.Lessons = Member.Lessons;
                     db.SaveChanges();
                 }
@@ -80,6 +82,14 @@ namespace LanguageInformant.Domain.Concrete
             Member dbEntry = db.Members.Find(MemberID);
 
             return dbEntry;
+        }
+
+        public Member GetMember(string name)
+        {
+            var db = new LanguageInformantDbContext();
+            return (from m in db.Members
+                    where m.Name == name
+                    select m).FirstOrDefault(); 
         }
     }
 }

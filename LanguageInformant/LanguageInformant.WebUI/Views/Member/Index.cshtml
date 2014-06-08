@@ -1,4 +1,5 @@
 ﻿@model LanguageInformant.Domain.Entities.Member
+@using Microsoft.AspNet.Identity
 
 @{
     ViewBag.Title = "Member Index";
@@ -16,3 +17,4 @@
         </td>
     </tr>
 </table>
+@Html.Partial("MemberInfo", new { User.Identity.Name })

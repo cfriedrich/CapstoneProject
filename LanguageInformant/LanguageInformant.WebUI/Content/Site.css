@@ -1,6 +1,6 @@
 ﻿body {
-    font-family: 'Segoe UI';
-    background-color: whitesmoke;
+    font-family: 'Segoe UI';     
+    background-color: #EAEAEA; 
 }
 
 #wrapper {
@@ -25,14 +25,10 @@
 }
 
 #breadcrumbNav {
-    padding-top: 10px;
-    padding-left: 15px;
-    width: 910px;
-    font-size: larger;
-    background-color: #E7DED4;
-    display:table-cell;
-    vertical-align:middle;
-    height: 20px;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: large;
+    background-color: lightgray;
 }
 
 #mainContent {
@@ -99,11 +95,15 @@
     font-size: small;
     background: lightgray;
     border: 2px solid rgba(33, 68, 72, 0.59);
+    text-align: center;
 }
 
     .mgmtButton a {
-    text-decoration: none;
-}
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+     }
 
 .alternate {
     background-color: lightgray;
@@ -112,7 +112,7 @@
 .pad {
     display: block; 
     vertical-align: middle;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -127,14 +127,20 @@
     border:inset thick crimson; 
     border-radius:8px 8px; 
     background-color:crimson;
-    display: block;
-    vertical-align: middle;
-    font-size: 16px;
+    font-size: larger;
+    font-weight: bold;
     text-align: center;
 }
 
+    .back a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+
 .padback {
-padding-top: 15px;
+padding-top: 40px;
 }
 
 .editMultiline {

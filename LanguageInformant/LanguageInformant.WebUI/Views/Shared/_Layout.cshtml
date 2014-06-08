@@ -25,7 +25,8 @@
     <div id="wrapper">
     <div id="headingContainer">
         <div id="headingBanner">
-            <img src="~/Content/Images/bannerfans_11101131.jpg" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />
+            @*<img src="~/Content/Images/bannerfans_11101131.jpg" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />*@
+            <img src="~/Content/Images/Banner2.png" alt="LanguageInformantBanner" style="width:inherit; height:inherit;" />
         </div>
         <div id="logoBox">
             <img src="~/Content/Images/Logo.png" alt="LanguageInformantLogo" style="width:inherit; height:inherit;" />
@@ -35,7 +36,10 @@
             @Html.Partial("_LoginPartial")
     </div>
         <div id="contentBox">
-            <div id="siteMapPath" style="">
+        <div id="breadcrumbNav">
+                <div id="siteMapPath" style="background-color:lightgray;">
+        </div>
+            
         @Html.MvcSiteMap().SiteMapPath()
             </div>
         @RenderBody()

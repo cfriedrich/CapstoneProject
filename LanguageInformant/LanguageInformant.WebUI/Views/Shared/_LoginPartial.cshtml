@@ -1,10 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity
+@using LanguageInformant.Domain.Entities
 @if (Request.IsAuthenticated)
 {
-    if(User.Identity.GetUserName() == "Admin")
-    {
-        
-    }
     
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
@@ -18,7 +15,7 @@
             </td>
         </tr>
         <tr>
-            <td class="loginButton">
+            <td class="mgmtButton">
                 @Html.ActionLink("Manage Account", "Manage", "Account", routeValues: null, htmlAttributes: new { id = "Manage" })
             </td>
         </tr>
@@ -28,7 +25,7 @@
            </td>
         </tr>
         <tr>
-            <td class="loginButton">
+            <td class="mgmtButton">
                 <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
             </td>
         </tr>
@@ -47,7 +44,7 @@ else
         </td>
         </tr>
         <tr>
-            <td>
+            <td class="mgmtButton">
                 @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
             </td>
         </tr>
@@ -60,7 +57,7 @@ else
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="mgmtButton">
                 @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
             </td>
         </tr>

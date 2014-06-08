@@ -12,6 +12,8 @@ namespace LanguageInformant.Domain.Abstract
         IQueryable<Member> GetMembers();
 
         Member GetMember(int memberID);
+
+        Member GetMember(string Name);
         void AddMember(Member member);
         void SaveMember(Member member);
         Member DeleteMember(int memberID);
