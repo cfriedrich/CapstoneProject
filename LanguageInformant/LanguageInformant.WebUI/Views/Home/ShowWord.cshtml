@@ -5,7 +5,6 @@
     ViewBag.Title = (@Model.Name + " Details");
     
 }
-@*<h2 style="margin-left:25px;">@Model.Name</h2>*@
 <div id="pageTitle" style="float:left; width:65%;">
 <h2 style="margin-left:15px;">Word Details</h2>
 </div>
@@ -13,9 +12,6 @@
 @Html.ActionLink("Lookup Another Word", "Dictionary")
 </div>
 <div id="wrapper" style="width:100%"> 
-    @*<div id="audioBox" style="width:100px; height:50px; float:right; margin-right:25px; padding:5px;">
-        <audio class="player" controls src="@Url.Action("GetSound", "Word", new { Model.WordID })" />
-    </div>*@
     <div id="container1" style="border:double medium; width:425px; height:auto; min-height:394px; float:left; margin-left:8px; padding-left:10px; padding-right:10px;">
         <h3>@Model.Name<div id="audioBox" style="float:right; margin-right:10px;">
             <audio class="player" controls src="@Url.Action("GetSound", "Word", new { Model.WordID })" />

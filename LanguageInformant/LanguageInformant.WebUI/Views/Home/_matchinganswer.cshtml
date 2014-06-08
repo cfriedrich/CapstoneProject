@@ -4,13 +4,12 @@
 {  
     <div style="margin:0px; background-color:lightgreen">
     @Html.RadioButton("Images[" + Model.Image.OrderNumber +"].Choices[0].Id",Model.Id)
-    @Model.Text
+    Correct!
     </div>
 } 
 else 
 {  
     @Html.RadioButton("Images[" + Model.Image.OrderNumber +"].Choices[0].Id",Model.Id)
-    @Model.Text
     <br />
 }
    

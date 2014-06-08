@@ -10,6 +10,7 @@
       </mvcSiteMapNode>
     <mvcSiteMapNode title="Course" controller="Home" action="Course">
     <mvcSiteMapNode title="Comprehension" controller="Home" action="Comprehension" />
+    <mvcSiteMapNode title="Matching" controller="Home" action="Matching" />
     <mvcSiteMapNode title="Grade" controller="Home" action="Grade"/>
       </mvcSiteMapNode>
     <mvcSiteMapNode title="Contact" controller ="Home" action="Contact"/>

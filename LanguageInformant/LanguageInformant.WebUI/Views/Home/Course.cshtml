@@ -7,18 +7,28 @@
 
 <div id="wrapper" style="width:100%; padding:10px;">
     <div id="container1" style="border:double medium; width:250px; height:395px; float:left; margin-left:5px; padding:5px;">
-        
-        <ul id="vocab" style="display:inline-block">Vocabulary Lessons
+        <fieldset>
+        <legend>Vocabulary Lessons</legend>
+        <ul id="vocab" style="display:inline-block">
         <li id="comp">@Html.ActionLink("Comprehension", "Comprehension", "Home")</li>
         <li id="match">@Html.ActionLink("Matching", "Matching", "Home")</li>
         </ul>
-        <ul>Sentence Lessons
-
+        </fieldset>
+        <fieldset>
+        <legend>Sentence Lessons</legend>
+        <ul>
+        <li>Lesson 1</li>
+        <li>Lesson 2</li>
         </ul>
-        <ul>Scene Lessons
+        </fieldset>
 
+        <fieldset>
+        <legend>Scene Lessons</legend>
+        <ul>
+        <li>Lesson 1</li>
+        <li>Lesson 2</li>
         </ul>
-
+        </fieldset>
     </div>
     <div id="container2" style="border:double medium; width:55%; height:176px; float:left; margin-left:5px; padding:10px; ">
         <p>Information will become available here as the user hovers over a selection
