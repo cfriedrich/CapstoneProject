@@ -8,12 +8,12 @@
 <div id="pageTitle" style="float:left; width:65%;">
 <h2 style="margin-left:15px;">Word Details</h2>
 </div>
-<div id="backToList" class="mgmtButton" style="float:right; width:20%; font-size:larger; text-align:center;">
+<div id="backToList" class="mgmtButton" style="float:right; width:20%; font-size:larger; text-align:center; margin-top: 5px;">
 @Html.ActionLink("Lookup Another Word", "Dictionary")
 </div>
 <div id="wrapper" style="width:100%"> 
     <div id="container1" style="border:double medium; width:425px; height:auto; min-height:394px; float:left; margin-left:8px; padding-left:10px; padding-right:10px;">
-        <h3>@Model.Name<div id="audioBox" style="float:right; margin-right:10px;">
+        <h3>@Model.Name<div id="audioBox" style="float:right; margin-right:30px;">
             <audio class="player" controls src="@Url.Action("GetSound", "Word", new { Model.WordID })" />
         </div></h3>
         <p><strong>Word language: </strong>@Model.Language.Name</p>

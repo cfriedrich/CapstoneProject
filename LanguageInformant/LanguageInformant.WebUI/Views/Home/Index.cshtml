@@ -7,9 +7,7 @@
 <div id="wrapper" style="width:100%;">
 <h1 style="margin-top:5px; margin-bottom:2px;">Welcome to the Language Informant</h1>
 <h2 style="margin-top:0px; margin-bottom:0px;">An exciting way to learn a new language</h2>
-<p style="margin-top:2px; margin-bottom:2px;">This site is still under construction.
-    Minor functionality will be implemented to demonstrate our Alpha Release.
-    Users can hover over tiles below to reveal navigation to other pages in the site. <br />
+<p style="margin-top:2px; margin-bottom:2px;">Curious about learning a new language. <br />
     Enjoy!
 </p>
 <div id="content" style="width:100%;">
@@ -17,14 +15,12 @@
     <div class="hover panel" style="float:left;">
         <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
-                @*<p>Learn more about us</p>
-                <p>Access Admin Portal (Temp)</p>*@
                 <img src="~/Content/Images/About.png" width="150px" height="125px" />
             </div>
         </div>
         <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
-                <div class="padback"
+                <div class="padback">
                 @Html.ActionLink("About Us", "About", "Home")
                 <br />
                 @Html.ActionLink("Admin Portal", "Index", "Admin")
@@ -36,7 +32,6 @@
     <div class="hover panel" style="float:left; margin-left:20px;">
         <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
-                @*<p>Check out our Dictionary here</p>*@
                 <img src="~/Content/Images/Dictionary.png" width="150px" height="125px" />
             </div>
         </div>
@@ -53,7 +48,6 @@
     <div class="hover panel" style="float:left; margin-top:15px;">
         <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:#dc143c;">
             <div class="pad">
-                @*<p>Lessons can be found here</p>*@
                 <img src="~/Content/Images/Lessons.png" width="150px" height="125px"/>
             </div>
         </div>
@@ -68,7 +62,6 @@
     <div class="hover panel" style="float:left; margin-left:20px; margin-top:15px;">
         <div class="front" style="font-weight: bold; border-radius:8px 8px; border: ridge thick ButtonShadow; background-color:crimson;">
             <div class="pad">
-                @*<p>Contact Us</p>*@
                 <img src="~/Content/Images/Contact.png" width="150px" height="125px" />
 
             </div>
@@ -76,12 +69,9 @@
         <div class="back" style="border:inset thick crimson; border-radius:8px 8px; background-color:crimson;">
             <div class="pad">
                 <div class="padback">
-                @*@Html.ActionLink("Need to Contact Us?", "Contact", "Home")
-
-                <br />*@
                 @Html.ActionLink("Send us some feedback", "Contact", "Home")
                 </div>
-                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@
         <h1> @Model.Name </h1>     
         <h3>Find the image that coresponds to the word</h3>
         <h3>The Word: @Model.Word</h3>
-@Html.Hidden("@Model.Name", @Model.Id)
+@Html.Hidden(@Model.Name, @Model.Id)
     
   @using (Html.BeginForm())
   {  

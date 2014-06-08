@@ -6,14 +6,14 @@
 }
 
 <div id="wrapper" style="width:100%; padding:10px;">
-    <div id="container1" style="border:dashed medium; width:95%; height:400px; float:left; margin-left:5px; padding:5px;">
+    <div id="container1" style="border:double medium; width:95%; height:400px; float:left; margin-left:5px; padding:5px;">
         <h2>Grade</h2>
 	    <div style="float:left; width:95%;">
 	    Quiz Name: @Model.Quiz.Name
 	    <br />
 	    Total Questions: @Model.Quiz.Questions.Count
 	    <br />
-	    Your Score: @Model.Score / @Model.TotalPoints
+	    Your Score: @Model.Score 
 	    </div>
         <br />
 	    @foreach (var question in Model.Quiz.Questions)
@@ -21,7 +21,9 @@
 	        @Html.Partial("_question", question);
         } 
 
-        
+        <div style="margin-top:20px; margin-left:10px; float:left;">
+            @Html.ActionLink("Reattempt Quiz", "Comprehension", "Home")
+        </div>
     </div>
     
    

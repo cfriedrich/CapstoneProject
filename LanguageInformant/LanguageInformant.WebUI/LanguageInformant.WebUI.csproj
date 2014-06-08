@@ -189,17 +189,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ComprehensionViewModel.cs" />
+    <Compile Include="Models\Identity\AccountViewModels.cs" />
+    <Compile Include="Models\ComprehensionQuiz\ComprehensionViewModel.cs" />
     <Compile Include="Models\Grade.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\MatchingAnswers.cs" />
-    <Compile Include="Models\MatchingImages.cs" />
-    <Compile Include="Models\MatchingQuiz.cs" />
-    <Compile Include="Models\MatchingViewModel.cs" />
-    <Compile Include="Models\VocabAnswers.cs" />
-    <Compile Include="Models\VocabQuestions.cs" />
-    <Compile Include="Models\VocabQuiz.cs" />
+    <Compile Include="Models\Identity\IdentityModels.cs" />
+    <Compile Include="Models\MatchingQuiz\MatchingAnswers.cs" />
+    <Compile Include="Models\MatchingQuiz\MatchingImages.cs" />
+    <Compile Include="Models\MatchingQuiz\MatchingQuiz.cs" />
+    <Compile Include="Models\MatchingQuiz\MatchingViewModel.cs" />
+    <Compile Include="Models\ComprehensionQuiz\VocabAnswers.cs" />
+    <Compile Include="Models\ComprehensionQuiz\VocabQuestions.cs" />
+    <Compile Include="Models\ComprehensionQuiz\VocabQuiz.cs" />
     <Compile Include="Models\WordDetailsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
