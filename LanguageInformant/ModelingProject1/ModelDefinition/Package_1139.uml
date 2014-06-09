@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1047d603-f510-4cff-a20e-400142184569"
+  name="LanguageInformant"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="46eb1bc8-5e10-43ab-864d-f088cf7328ef"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DLanguageInformant"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="929e7f67-d3bf-4e39-9404-1f65bf3ce840"
+        LastKnownName="WebUI"
+        LastKnownLocation="Package1_1139.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cd2e75db-c2a1-4d9a-9481-bc3ecfa5f297"
+        LastKnownName="Domain"
+        LastKnownLocation="Package6_1139.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

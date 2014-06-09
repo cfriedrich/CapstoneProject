@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cd2e75db-c2a1-4d9a-9481-bc3ecfa5f297"
+  name="Domain"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="cd40359a-d8ae-4c6a-a077-8ed22e66cfa4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DLanguageInformant.Domain"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3ded3d76-7844-4555-a228-c41b1e011306"
+        LastKnownName="Abstract"
+        LastKnownLocation="Package7_1139.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c6bdc140-96d6-4674-92e5-44c2a769ee61"
+        LastKnownName="Entities"
+        LastKnownLocation="Package8_1139.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

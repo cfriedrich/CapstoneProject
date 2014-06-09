@@ -13,9 +13,11 @@ namespace LanguageInformant.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-
+        //repositories being used
         private IWordRepository repository = new EFWordRepository();
         LanguageInformantDbContext db = new LanguageInformantDbContext();
+        
+        //ViewModels
         private ComprehensionViewModel _compLesson;
         private MatchingViewModel _matchingLesson;
 
@@ -99,8 +101,7 @@ namespace LanguageInformant.WebUI.Controllers
 
         public PartialViewResult _answer()
         {
-            var quiz = _compLesson.GetQuiz();
-            return PartialView(quiz);
+            return PartialView();
         }
         
         public PartialViewResult WordListView()

@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageInformant.WebUI", "LanguageInformant.WebUI\LanguageInformant.WebUI.csproj", "{1471782B-6854-4DCF-B18E-AA11E4539E87}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E1F98AE0-36A8-440F-BDF3-5097839B7314} = {E1F98AE0-36A8-440F-BDF3-5097839B7314}
@@ -11,6 +9,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageInformant.Domain", "LanguageInformant.Domain\LanguageInformant.Domain.csproj", "{E1F98AE0-36A8-440F-BDF3-5097839B7314}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageInformant.UnitTests", "LanguageInformant.UnitTests\LanguageInformant.UnitTests.csproj", "{4142EE44-17D9-42C2-8F01-F6A19FC0039D}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{26BDA745-E815-4A62-B25C-6B2FA4B54A93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +30,10 @@ Global
 		{4142EE44-17D9-42C2-8F01-F6A19FC0039D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4142EE44-17D9-42C2-8F01-F6A19FC0039D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4142EE44-17D9-42C2-8F01-F6A19FC0039D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BDA745-E815-4A62-B25C-6B2FA4B54A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BDA745-E815-4A62-B25C-6B2FA4B54A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BDA745-E815-4A62-B25C-6B2FA4B54A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BDA745-E815-4A62-B25C-6B2FA4B54A93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

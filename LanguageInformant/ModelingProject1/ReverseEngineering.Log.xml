@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-06-09T11:50:15" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '7e6797f4-0d84-4c09-a736-63732da86c6d' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::Domain' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::Domain::Entities' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::Domain::Entities::Member' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel' -  (Class)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::ComprehensionViewModel' -  (Operation)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::GetQuestions' -  (Operation)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::GetQuiz' -  (Operation)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::Grade' -  (Operation)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::Grade::toBeGradedQuiz' -  (Parameter)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::ComprehensionViewModel::member' -  (Property)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::Grade' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::VocabQuestions' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::LanguageInformant::WebUI::Models::VocabQuiz' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::IList' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::IList&lt;VocabQuestions‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="High" Text="(6) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-06-09T11:50:19" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

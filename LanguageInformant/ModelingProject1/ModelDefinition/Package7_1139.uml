@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3ded3d76-7844-4555-a228-c41b1e011306"
+  name="Abstract"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="648c9722-085e-4280-a149-06f6dc70a3f3"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DLanguageInformant.Domain.Abstract"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="c87bb671-9bdc-4764-b744-27db7e31ab50"
+        name="IMeaningRepository"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ef65b27d-9c6f-4f94-b175-150421a5b6e2"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fmadmi_000%2FDocuments%2FGitHub%2FCapstoneProject%2FLanguageInformant%2FLanguageInformant.Domain%2Fbin%2FDebug%2FLanguageInformant.Domain.dll Namespace%3DLanguageInformant.Domain.Abstract Type%3DIMeaningRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6195f99e-3d3e-4b3f-a10f-2867bfdc66d0"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16311c04-7308-424d-8cba-4a3717d86812">
+                <propertyInstance
+                  Id="bf95015f-2610-4c1f-a608-17f52fdfec99"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a717e701-4422-4f2d-8540-85872d627e70">
+                <propertyInstance
+                  Id="a863db0c-36b5-423e-b964-d30c8aaa427c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="476f0fbe-0a4b-4c08-843f-ee5b5b528174">
+                <propertyInstance
+                  Id="0874b235-1221-40a1-a3a4-24f21c2714b7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76fcbb1d-9f68-4977-92f1-834461785089">
+                <propertyInstance
+                  Id="4647bad3-07e9-4185-bbc8-b3b993328c40"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="24703bfd-a0c0-47cc-b90e-87437183fdcd"
+        name="IWordRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ffd38d65-8421-40a0-9f6b-44521297eb24"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fmadmi_000%2FDocuments%2FGitHub%2FCapstoneProject%2FLanguageInformant%2FLanguageInformant.Domain%2Fbin%2FDebug%2FLanguageInformant.Domain.dll Namespace%3DLanguageInformant.Domain.Abstract Type%3DIWordRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ce79685d-311e-43ae-b1c6-1b638d31eb67"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3629d039-339b-4f62-a3e2-0c0f6063db56">
+                <propertyInstance
+                  Id="567743c8-e047-4929-ad6e-6cf13657a987"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d26637c0-fbcf-41ba-93b6-720f23050413">
+                <propertyInstance
+                  Id="e6d7c684-0f22-47d4-a304-e3142095c5a9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1e660a2-8c17-4b21-9606-7212ab3c147f">
+                <propertyInstance
+                  Id="512848cb-b672-4347-ba8b-b871ea3c2689"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2b2d461-2125-44c6-a943-f22507ee8643">
+                <propertyInstance
+                  Id="1223251b-945c-42ea-b908-19cf4c3efbb2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -11,14 +11,15 @@ namespace LanguageInformant.WebUI.Models
 {
     public class MatchingViewModel
     {
+        //This model is used to create and grade the matching quiz model
+        //repositories being used
         private IMeaningRepository meaningrepo = new EFMeaningRepository();
         private IWordRepository wordrepo = new EFWordRepository();
-
-         
 
         //user logged in to track progress
         Member member = new Member();
 
+        //create the matching quiz
         public MatchingQuiz GetQuiz()
         {
             Word theWord = wordrepo.GetWord("pato");
@@ -34,6 +35,7 @@ namespace LanguageInformant.WebUI.Models
             return quiz;
         }
 
+        //Populate the quiz with images and answers
         private IList<MatchingImages> GetImages()
         {
 
@@ -74,6 +76,7 @@ namespace LanguageInformant.WebUI.Models
                     }
                 };
             
+            //each image is given an answer
             images[0].AddChoice(new MatchingAnswers() { IsAnswer = false, Text = matchingWord1.Name, Id = matchingWord1.Meanings.First().MeaningID });
             images[1].AddChoice(new MatchingAnswers() { IsAnswer = true, Text = matchingWord2.Name, Id = matchingWord2.Meanings.First().MeaningID });
             images[2].AddChoice(new MatchingAnswers() { IsAnswer = false, Text = matchingWord3.Name, Id = matchingWord3.Meanings.First().MeaningID });
@@ -81,13 +84,17 @@ namespace LanguageInformant.WebUI.Models
             return images;
         }
 
+        //Quiz Grading (Post)
         public Grade Grade(MatchingQuiz toBeGradedQuiz)
         {
+            //get quiz information
             var persistedQuiz = GetQuiz();
+            //create a grade to store quiz in
             var grade = new Grade() { MatchingQuiz = persistedQuiz };
 
             foreach (var question in toBeGradedQuiz.Images)
             {
+                //look for image based off id of the image 
                 var persistedQuestion = (from q in persistedQuiz.Images
                                          where q.Id == question.Id
                                          select q).FirstOrDefault();
@@ -96,23 +103,23 @@ namespace LanguageInformant.WebUI.Models
                 {
                     foreach (var choice in question.Choices)
                     {
+                        //look for the answer based off id of radio button
                         var persistedChoice = (from c in persistedQuestion.Choices
                                                where c.Id == choice.Id
                                                select c).FirstOrDefault();
 
-                        // sets the user choice in the actual exam fetched from database! 
+                        // sets the user choice in the actual exam 
                         persistedChoice.IsSelected = true;
 
                         if (persistedChoice.IsAnswer)
                         {
+                            //add points to score
                             grade.Score += persistedQuestion.Point;
                         }
                     }
                 }
             }
-
             return grade;
         }
-
     }
 }
