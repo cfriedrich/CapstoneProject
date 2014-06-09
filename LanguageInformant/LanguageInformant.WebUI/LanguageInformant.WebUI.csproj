@@ -335,6 +335,9 @@
     <Content Include="Views\Member\List.cshtml" />
     <Content Include="Views\Member\MemberInfo.cshtml" />
     <Content Include="Views\Home\Course.cshtml" />
+    <Content Include="Views\Account\EditAddressPartial.cshtml" />
+    <Content Include="Views\Account\AcctInfo.cshtml" />
+    <Content Include="Views\Account\_EditEmailPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

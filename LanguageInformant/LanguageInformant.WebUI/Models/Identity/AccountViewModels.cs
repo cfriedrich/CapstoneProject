@@ -26,6 +26,45 @@ namespace LanguageInformant.WebUI.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "EmailId Required:")]
+        [Display(Name = "Email:")]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$",
+                                                ErrorMessage = "Email Format is wrong")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string Email { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "Street Address Required")]
+        [Display(Name = "Street Address:")]
+        [StringLength(100, ErrorMessage = "Less than 100 characters")]
+        public string StreetAddress { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "City Required")]
+        [Display(Name = "City:")]
+        [RegularExpression(@"^[a-zA-Z'.\s]{1,40}$", ErrorMessage = "Special Characters not allowed")]
+        [StringLength(50, ErrorMessage = "Less than 50 characters")]
+        public string City { get; set; }
+
+        [DataType(DataType.Text)]
+        [Required(ErrorMessage = "State Required")]
+        [Display(Name = "State:")]
+        [RegularExpression(@"^[a-zA-Z'.\s]{1,40}$", ErrorMessage = "Special Characters not allowed")]
+        [StringLength(30, ErrorMessage = "Less than 30 characters")]
+        public string State { get; set; }
+
+        [DataType(DataType.PostalCode)]
+        [Required(ErrorMessage = "ZipCode Required")]
+        [Display(Name = "Zip Code:")]
+        [StringLength(10, ErrorMessage = "Less than 10 characters")]
+        public string ZipCode { get; set; }
+
+        [DataType(DataType.Text)]
+        [Display(Name = "Country:")]
+        [StringLength(20, ErrorMessage = "Less than 20 characters")]
+        public string Country { get; set; }
     }
 
     public class LoginViewModel

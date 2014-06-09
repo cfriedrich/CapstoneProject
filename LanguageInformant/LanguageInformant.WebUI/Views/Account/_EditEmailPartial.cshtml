@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNet.Identity
+@model LanguageInformant.WebUI.Models.ManageUserViewModel
+
+
+<h2>Edit Email</h2>
+
+
+<div id="formwrapper" style="width:45%;">
+    <div id="formPart2" style="float:left; margin-left:10px;">
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div id="registerbtn" style="float:left; margin-left:10px;">
+        <input type="submit" class="btn btn-default" value="Submit" />
+    </div>
+</div>

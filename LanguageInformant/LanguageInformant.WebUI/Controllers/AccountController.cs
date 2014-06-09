@@ -181,6 +181,10 @@ namespace LanguageInformant.WebUI.Controllers
             return View(model);
         }
 
+        public ActionResult AcctInfo()
+        {
+            return View();
+        }
         //
         // POST: /Account/ExternalLogin
         [HttpPost]
