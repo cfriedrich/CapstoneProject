@@ -1,8 +1,8 @@
 ﻿@using LanguageInformant.WebUI.Models;
 @using Microsoft.AspNet.Identity;
 @{
-    ViewBag.Title = "AcctInfo";
-}
+    ViewBag.Title = "Account Info";
+}@Html.ActionLink("Home", "Index", "Home")
 <p>You're logged in as <strong>@User.Identity.GetUserName()</strong>.</p>
 
 <h2>Edit your account</h2>
