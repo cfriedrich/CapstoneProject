@@ -232,6 +232,7 @@
     <None Include="Properties\PublishProfiles\languageinformant %284%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant %286%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\languageinformant %288%29.pubxml" />
     <None Include="Properties\PublishProfiles\languageinformant.pubxml" />
     <None Include="Properties\PublishProfiles\New.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -338,6 +339,7 @@
     <Content Include="Views\Account\EditAddressPartial.cshtml" />
     <Content Include="Views\Account\AcctInfo.cshtml" />
     <Content Include="Views\Account\_EditEmailPartial.cshtml" />
+    <Content Include="Views\Vocabulary\VocabularyWords.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -196,5 +196,10 @@ namespace LanguageInformant.WebUI.Controllers
             }
             return View();
         }
+
+        public PartialViewResult VocabularyWords(Vocabulary vocabulary)
+        {
+            return PartialView(vocabulary);
+        }
     }
 }

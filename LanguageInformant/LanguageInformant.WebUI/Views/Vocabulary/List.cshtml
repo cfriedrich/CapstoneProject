@@ -18,6 +18,9 @@
         <th width="40%">
             Lesson
         </th>
+        <th>
+            Words
+        </th>
         <th colspan="5">
             <div class="mgmtButton">
                 @Html.ActionLink("Create Vocabulary", "Create")
@@ -33,6 +36,9 @@
             </td>
             <td>
                 @item.Lesson
+            </td>
+            <td>
+                @Html.Partial("VocabularyWords", item)
             </td>
             <td>
                 <div class="mgmtButton">

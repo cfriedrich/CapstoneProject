@@ -1,0 +1,8 @@
+﻿@model LanguageInformant.Domain.Entities.Vocabulary
+@using LanguageInformant.Domain.Entities
+
+@foreach (Word word in Model.Words)
+{
+    @word.Name
+}
+
